@@ -28,22 +28,7 @@
 }
 
 
-.login-btn {
-  border: none;
-  outline: none;
-  background: transparent;
-  color: white;
-}
-
-.login-btn:hover {
-  color: black;
-  transition: 250ms;
-  -webkit-transition: 250ms;
-  -moz-transition: 250ms;
-  -ms-transition: 250ms;
-  -o-transition: 250ms;
-}
-
+.login-btn,
 .logout-btn {
   border: none;
   outline: none;
@@ -51,6 +36,7 @@
   color: white;
 }
 
+.login-btn:hover,
 .logout-btn:hover {
   color: black;
   transition: 250ms;
@@ -59,7 +45,6 @@
   -ms-transition: 250ms;
   -o-transition: 250ms;
 }
-
 /* NAVBAR END */
 
 /* DUTY */
