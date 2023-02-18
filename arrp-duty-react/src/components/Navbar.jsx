@@ -1,4 +1,5 @@
 import React from 'react'
+import Login from '../pages/Login'
 
 const Navbar = () => {
   return (
@@ -6,7 +7,7 @@ const Navbar = () => {
       <div className='navbar-contenet'>
         <ul className='navbar-nav' >
           <li className='navbar-item'>
-            <p>Bejelenetkezés</p>
+            <Login />
           </li>
         </ul>
       </div>

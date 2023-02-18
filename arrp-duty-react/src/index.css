@@ -27,7 +27,15 @@
   color: white;
 }
 
-.navbar-item:hover {
+
+.login-btn {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: white;
+}
+
+.login-btn:hover {
   color: black;
   transition: 250ms;
   -webkit-transition: 250ms;
