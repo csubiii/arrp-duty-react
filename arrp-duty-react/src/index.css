@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 65px;
+  background-color: #3546e2;
+}
+
+.navbar-nav,
+.navbar-item {
+  list-style-type: none;
+  background-color: #5585ff;
+  text-align: center;
+  border-radius: 15px;
+  margin: 5px;
+  padding: 5px 30px;
+  color: white;
+}
+
+.navbar-item:hover {
+  color: black;
+  transition: 250ms;
+  -webkit-transition: 250ms;
+  -moz-transition: 250ms;
+  -ms-transition: 250ms;
+  -o-transition: 250ms;
+}
+
+/* NAVBAR END */
