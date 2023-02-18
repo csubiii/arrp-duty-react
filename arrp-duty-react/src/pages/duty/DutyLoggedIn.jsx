@@ -1,14 +1,6 @@
-import { auth } from '../config/firebase';
-import { useAuthState } from 'react-firebase-hooks/auth'
-import { signOut } from 'firebase/auth';
+import React from "react";
 
 const DutyLoggedIn = () => {
-
-  const [user] = useAuthState(auth);
-
-  const signUserOut = async () => {
-    await signOut(auth);
-  }
 
   return (
     <div className='duty-container'>
@@ -20,7 +12,7 @@ const DutyLoggedIn = () => {
             </button>
           </li>
           <li>
-            <button onClick={signUserOut}>Kijelentkezés</button>
+            
           </li>
         </ul>
       </div>

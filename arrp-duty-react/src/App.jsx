@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 import Navbar from './components/Navbar'
-import Duty from './pages/Duty'
+import Duty from './pages/duty/Duty'
 
 function App() {
 

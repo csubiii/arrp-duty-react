@@ -1,4 +1,4 @@
-import { auth } from '../config/firebase';
+import { auth } from '../../config/firebase';
 import { useAuthState } from 'react-firebase-hooks/auth'
 import DutyLoggedIn from './DutyLoggedIn';
 

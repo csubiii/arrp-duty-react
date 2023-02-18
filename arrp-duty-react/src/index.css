@@ -44,6 +44,22 @@
   -o-transition: 250ms;
 }
 
+.logout-btn {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: white;
+}
+
+.logout-btn:hover {
+  color: black;
+  transition: 250ms;
+  -webkit-transition: 250ms;
+  -moz-transition: 250ms;
+  -ms-transition: 250ms;
+  -o-transition: 250ms;
+}
+
 /* NAVBAR END */
 
 /* DUTY */
