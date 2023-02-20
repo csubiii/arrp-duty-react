@@ -1,7 +1,5 @@
 import { auth } from '../config/firebase';
 import { useAuthState } from 'react-firebase-hooks/auth'
-import Login from '../pages/Login'
-import LogOut from './LogOut';
 
 const Navbar = () => {
 
@@ -12,7 +10,7 @@ const Navbar = () => {
       <div className='navbar-contenet'>
         <ul className='navbar-nav' >
           <li className='navbar-item'>
-            { user ? <LogOut /> : <Login /> }
+            Helo
           </li>
         </ul>
       </div>
