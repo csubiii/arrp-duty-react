@@ -8,5 +8,8 @@
     "react-router": "^6.8.1",
     "react-router-dom": "^6.8.1",
     "yup": "^1.0.0"
+  },
+  "devDependencies": {
+    "react-error-overlay": "^6.0.9"
   }
 }
