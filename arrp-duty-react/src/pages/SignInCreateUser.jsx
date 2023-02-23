@@ -22,9 +22,9 @@ const SignInCreateUser = () => {
 
   const onCreateService = async () => {
     await addDoc(serviceRef, {
-      StartTime: '2023/01/01 00:00:00',
-      EndTIme: '2023/02/02 22:22:22',
-      uid: user.uid,
+      startTime: "2023/01/01 00:00:00",
+      endTime: "2023/02/02 22:22:22",
+      uId: user.uid,
     });
   }
 

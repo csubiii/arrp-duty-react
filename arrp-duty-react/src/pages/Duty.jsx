@@ -1,21 +1,34 @@
-import { auth } from "../config/firebase";
-import { signOut } from "firebase/auth";
+import { auth, db } from "../config/firebase";
+import { collection, getDocs, query, where } from "firebase/firestore";
 import { useAuthState } from "react-firebase-hooks/auth"
+import { useEffect, useState } from "react";
 import DutyPanel from "./DutyPanel";
+
 
 const Duty = () => {
 
   const [user] = useAuthState(auth);
+  const serviceRef = collection(db, "Szolgálat");
 
-  const signUserOut = async () => {
-    await signOut(auth);
+  const [ docList, setDocList] = useState([]);
+
+  const q = query(serviceRef, where("startTime", "==", "startTime"))
+
+  const getDocList = async () => {
+    const data = await getDocs(q)
+    setDocList(data.docs.map((doc) => ({...doc.data(), id: doc.id})))
   }
 
+  useEffect(() => {
+    getDocList();
+  })
+
+
   return (
-    <div>
-    <button onClick={signUserOut}  >Log out</button>
+    <>
     {user ? <DutyPanel /> : <h1>pls log in</h1> }
-    </div>
+    {docList.map((doc) => <DutyPanel key={doc.id} StartTime={doc.StartTime} /> )}
+    </>
   )
 }
 
