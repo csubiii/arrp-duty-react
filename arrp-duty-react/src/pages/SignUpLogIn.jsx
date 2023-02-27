@@ -1,15 +1,13 @@
 import { signInWithEmailAndPassword, createUserWithEmailAndPassword, getAuth } from "firebase/auth";
-import { useAuthState } from "react-firebase-hooks/auth"
 import { app, auth, db } from "../config/firebase";
-import { addDoc, collection, doc, getDoc, getDocs, updateDoc } from "firebase/firestore";
-import { useEffect, useState } from "react";
+import { addDoc, collection } from "firebase/firestore";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 
 
 const SignUpLogIn = () => {
 
   const serviceRef = collection(db, "Service");
-  const [user] = useAuthState(auth);
   const authGetApp = getAuth(app);
 
   const { handleSubmit } = useForm();
@@ -18,11 +16,12 @@ const SignUpLogIn = () => {
   const [ password, setPassword ] = useState("");
   const [ username, setUsername ] = useState("");
 
-  const onCreateService = async (user) => {
+  const onCreateService = async (userCred) => {
     await addDoc(serviceRef, {
       startTime: "2023/01/01 00:00:00",
       endTime: "2023/02/02 22:22:22",
-      userId: user,
+      serviceTime: "01:00",
+      userId: userCred,
       username: username,
     });
   }
@@ -33,16 +32,14 @@ const SignUpLogIn = () => {
     createUserWithEmailAndPassword(authGetApp, email, password)
       .then((userCredential) => {
         // Signed in 
-        const user = userCredential.user.uid;
-        console.log(user)
-        onCreateService(user);
+        const userCred = userCredential.user.uid;
+        console.log(userCred)
+        onCreateService(userCred);
         // ...
       })
       .catch((error) => {
         console.log(error.code)
       });
-
-
 
   }
 
@@ -51,7 +48,7 @@ const SignUpLogIn = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in 
-        const user = userCredential.user;
+        const userCred = userCredential.user.uid;
         // ...
       })
       .catch((error) => {
@@ -60,10 +57,9 @@ const SignUpLogIn = () => {
 
   }
 
-
   return (
     <form onSubmit={handleSubmit(createUser)}>
-      <input type="text" placeholder="IC NÉV" onChange={(e) => setUsername(e.target.value)} />
+    <input type="text" placeholder="IC NÉV" onChange={(e) => setUsername(e.target.value)} />
     <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
     <input type="password" placeholder="Jelszó" onChange={(e) => setPassword(e.target.value)} />
     <input type="submit" value="Regisztráció" />

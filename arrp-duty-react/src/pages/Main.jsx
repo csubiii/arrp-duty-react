@@ -2,7 +2,7 @@ import React from 'react'
 import SignUpLogIn from './SignUpLogIn'
 import { useAuthState } from "react-firebase-hooks/auth"
 import { auth } from "../config/firebase";
-import LogOut from './LogOut';
+import Duty from './Duty';
 
 
 const Main = () => {
@@ -12,7 +12,7 @@ const Main = () => {
 
   return (
     <>
-    { user ? <LogOut /> : <SignUpLogIn /> }
+    { user ? <Duty /> : <SignUpLogIn /> }
     </>
   )
 }
