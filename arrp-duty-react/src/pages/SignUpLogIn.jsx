@@ -16,12 +16,14 @@ const SignUpLogIn = () => {
 
   const [ email, setEmail ] = useState("");
   const [ password, setPassword ] = useState("");
+  const [ username, setUsername ] = useState("");
 
   const onCreateService = async (user) => {
     await addDoc(serviceRef, {
       startTime: "2023/01/01 00:00:00",
       endTime: "2023/02/02 22:22:22",
       userId: user,
+      username: username,
     });
   }
 
@@ -37,7 +39,7 @@ const SignUpLogIn = () => {
         // ...
       })
       .catch((error) => {
-        alert(error.code)
+        console.log(error.code)
       });
 
 
@@ -53,7 +55,7 @@ const SignUpLogIn = () => {
         // ...
       })
       .catch((error) => {
-        alert(error.code)
+        console.log(error.code)
       });
 
   }
@@ -61,6 +63,7 @@ const SignUpLogIn = () => {
 
   return (
     <form onSubmit={handleSubmit(createUser)}>
+      <input type="text" placeholder="IC NÉV" onChange={(e) => setUsername(e.target.value)} />
     <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
     <input type="password" placeholder="Jelszó" onChange={(e) => setPassword(e.target.value)} />
     <input type="submit" value="Regisztráció" />
