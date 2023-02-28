@@ -18,9 +18,10 @@ const SignUpLogIn = () => {
 
   const onCreateService = async (userCred) => {
     await addDoc(serviceRef, {
-      startTime: "2023/01/01 00:00:00",
-      endTime: "2023/02/02 22:22:22",
-      serviceTime: "01:00",
+      startDate: "2023/01/01",
+      endDate: "2023/02/02",
+      startTime: 1,
+      endTime: 1,
       userId: userCred,
       username: username,
     });
@@ -33,7 +34,7 @@ const SignUpLogIn = () => {
       .then((userCredential) => {
         // Signed in 
         const userCred = userCredential.user.uid;
-        console.log(userCred)
+        console.log(userCredential.user)
         onCreateService(userCred);
         // ...
       })

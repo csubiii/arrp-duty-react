@@ -1,8 +1,7 @@
 import { useAuthState } from "react-firebase-hooks/auth"
-import { auth, db } from "../config/firebase";
+import { auth, db } from "../../config/firebase";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { useEffect, useState } from "react";
-import LogOut from './LogOut'
 import DutyData from "./DutyData";
 
 const Duty = () => {
@@ -23,12 +22,10 @@ const Duty = () => {
     getServiceData();
   }, [])
 
-  console.log(serviceDataList)
-
   return (
-    <>
-    {serviceDataList.map((doc) => <DutyData key={doc.id} userId={doc.userId} startTime={doc.startTime} endTime={doc.endTime} serviceTime={doc.serviceTime} username={doc.username} /> )}
-    </>
+    <div>
+    {serviceDataList.map((service) => <DutyData key={service.id} docId={service.id} startDate={service.startDate} endDate={service.endDate} userId={service.userId} startTime={service.startTime} endTime={service.endTime} username={service.username} /> )}
+    </div>
   )
 }
 

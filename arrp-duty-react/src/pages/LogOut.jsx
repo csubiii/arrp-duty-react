@@ -8,7 +8,7 @@ const LogOut = () => {
   }
 
   return (
-    <button onClick={signUserOut}>Kilépés</button>
+    <button style={{background: "red", color: "pink"}} onClick={signUserOut}>Kilépés</button>
   )
 }
 

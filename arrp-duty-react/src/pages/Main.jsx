@@ -2,7 +2,7 @@ import React from 'react'
 import SignUpLogIn from './SignUpLogIn'
 import { useAuthState } from "react-firebase-hooks/auth"
 import { auth } from "../config/firebase";
-import Duty from './Duty';
+import Duty from './duty/Duty';
 
 
 const Main = () => {

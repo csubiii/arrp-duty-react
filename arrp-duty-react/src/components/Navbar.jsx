@@ -10,7 +10,7 @@ const Navbar = () => {
       <div className='navbar-contenet'>
         <ul className='navbar-nav' >
           <li className='navbar-item'>
-            <p>Bejelentkezés</p>
+            <p>ARRP-DUTY</p>
           </li>
         </ul>
       </div>
