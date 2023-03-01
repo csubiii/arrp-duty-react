@@ -1,6 +1,6 @@
 import React from 'react'
 import LogOut from '../LogOut'
-import DutyGetStartDate from './DutyGetStartDate'
+import DutyGetStartDate from './DutyUpdateStarts'
 
 const DutyData = ({ docId, userId, endDate, startDate, startTime, endTime, username }) => {
   return (
@@ -8,7 +8,7 @@ const DutyData = ({ docId, userId, endDate, startDate, startTime, endTime, usern
     <h1>Üdv! {username}</h1>
     <p>{userId}</p>
     <p>Utolsó elindítás ideje: {startDate} {startTime}</p>
-    <DutyGetStartDate />
+    <DutyGetStartDate docId={docId} />
     <p>Utolsó leadás ideje: {endDate} {endTime}</p>
     <LogOut />
     </div>

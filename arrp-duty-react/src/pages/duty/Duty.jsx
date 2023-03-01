@@ -20,7 +20,7 @@ const Duty = () => {
   
   useEffect(() => {
     getServiceData();
-  }, [])
+  })
 
   return (
     <div>
