@@ -2,7 +2,9 @@ import { useAuthState } from "react-firebase-hooks/auth"
 import { auth, db } from "../../config/firebase";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { useEffect, useState } from "react";
-import DutyData from "./DutyData";
+import DutyUpdateEnds from "./DutyUpdateEnds";
+import DutyUpdateStarts from "./DutyUpdateStarts";
+import LogOut from"../LogOut"
 
 const Duty = () => {
 
@@ -17,14 +19,26 @@ const Duty = () => {
     const data = await getDocs(q)
     setServiceDataList(data.docs.map((doc) => ({...doc.data(), id: doc.id})))
   }
-  
+
   useEffect(() => {
     getServiceData();
-  })
+  }, [])
+  
 
   return (
     <div>
-    {serviceDataList.map((service) => <DutyData key={service.id} docId={service.id} startDate={service.startDate} endDate={service.endDate} userId={service.userId} startTime={service.startTime} endTime={service.endTime} username={service.username} /> )}
+      {serviceDataList.map((a) => {
+        return (
+          <div key={a.id}>
+            <h1>Üdv! {a.username}</h1>
+            <p>Utolsó elindítás ideje: {a.startDate} {a.startTime}</p>
+            <DutyUpdateStarts getServiceData={getServiceData} docId={a.id} />
+            <p>Utolsó leadás ideje: {a.endDate} {a.endTime}</p>
+            <DutyUpdateEnds getServiceData={getServiceData} docId={a.id} />
+            <div><LogOut /></div>
+        </div>
+        )
+      })}
     </div>
   )
 }

@@ -2,12 +2,10 @@ import { doc, updateDoc } from "firebase/firestore"
 import { useState, useEffect } from "react"
 import { db } from "../../config/firebase"
 
-const DutyUpdateStarts = ({ docId, getServiceData }) => {
+const DutyUpdateEnds = ({ docId,  getServiceData }) => {
 
-  let isInDuty = true
-
-  const [ startDate, setStartDate] = useState(0)
-  const [ startTime, setStartTime] = useState(0)
+  const [ endDate, setEndDate] = useState(0);
+  const [ endTime, setEndTime] = useState(0);
 
   const serviceDocRef = doc(db, 'Service', docId)
 
@@ -37,26 +35,30 @@ const DutyUpdateStarts = ({ docId, getServiceData }) => {
       day = `0${day}`
     }
 
-    setStartDate(`${year}/${month}/${day}`);
-    setStartTime(`${hour}:${minute}:${second}`);    
+    setEndDate(`${year}/${month}/${day}`);
+    setEndTime(`${hour}:${minute}:${second}`);
   }
   
-  const updateStartTimeAndDate = async() => {
+  const updateEndTimeAndDate = async() => {
     await updateDoc(serviceDocRef, {
-      startDate: startDate,
-      startTime: startTime,
+      endDate: endDate,
+      endTime: endTime,
     })
     getServiceData();
-  
   }
 
  useEffect(() => {
   getTimeAndDate();
  })
  
+
   return (
-    <button onClick={updateStartTimeAndDate} style={{background: "green", color: "white"}}>Szolgálatba lépés</button>
+    <>
+      <button onClick={updateEndTimeAndDate} style={{background: "red", color: "white"}}>Szolgálatba leadás</button>
+    </>
+
+    
   )
 }
 
-export default DutyUpdateStarts
+export default DutyUpdateEnds

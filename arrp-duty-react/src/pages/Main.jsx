@@ -8,7 +8,6 @@ import Duty from './duty/Duty';
 const Main = () => {
 
   const [user] = useAuthState(auth);
-  console.log(user?.uid)
 
   return (
     <>

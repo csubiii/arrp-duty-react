@@ -1,18 +1,28 @@
-import React from 'react'
+{/* import React from 'react'
 import LogOut from '../LogOut'
-import DutyGetStartDate from './DutyUpdateStarts'
+import DutyUpdateEnds from './DutyUpdateEnds'
+import DutyUpdateStarts from './DutyUpdateStarts'
 
 const DutyData = ({ docId, userId, endDate, startDate, startTime, endTime, username }) => {
+
+   const search = ' ';
+  const replaceWith = "";
+  const numStartTime = Number(startTime.split(search).join(replaceWith));
+  const numEndTime = Number(endTime.split(search).join(replaceWith));
+  console.log(typeof numStartTime, numEndTime)
+
   return (
-    <div className={docId}>
+    <div>
     <h1>Üdv! {username}</h1>
     <p>{userId}</p>
     <p>Utolsó elindítás ideje: {startDate} {startTime}</p>
-    <DutyGetStartDate docId={docId} />
+    <DutyUpdateStarts docId={docId} />
     <p>Utolsó leadás ideje: {endDate} {endTime}</p>
-    <LogOut />
+    <DutyUpdateEnds docId={docId} />
+    <div><LogOut /></div>
+    <p>Szolgálati idő:</p>
     </div>
   )
 }
 
-export default DutyData
+export default DutyData */}
