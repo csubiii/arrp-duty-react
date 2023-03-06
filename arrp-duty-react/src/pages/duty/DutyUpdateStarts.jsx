@@ -1,15 +1,20 @@
-import { doc, updateDoc } from "firebase/firestore"
+import { useAuthState } from "react-firebase-hooks/auth";
+import { addDoc, collection, doc, query, where } from "firebase/firestore"
 import { useState, useEffect } from "react"
-import { db } from "../../config/firebase"
+import { db, auth } from "../../config/firebase"
+import { useForm } from "react-hook-form";
 
-const DutyUpdateStarts = ({ docId, getServiceData }) => {
+const DutyUpdateStarts = ({ docId, getServiceData, username }) => {
 
-  let isInDuty = true
+  const [ startDate, setStartDate ] = useState(0)
+  const [ startTime, setStartTime ] = useState(0)
+  const [ isDisabled, setIsDisabled ] = useState(false)
+  const { handleSubmit } = useForm();
 
-  const [ startDate, setStartDate] = useState(0)
-  const [ startTime, setStartTime] = useState(0)
+  const [user] = useAuthState(auth);
+  const docRef = doc(db, "Service", docId);
+  const colRef = collection(docRef, `${username} SzolgálatbalépésDátuma`)
 
-  const serviceDocRef = doc(db, 'Service', docId)
 
   const getTimeAndDate = () => {
     
@@ -38,24 +43,29 @@ const DutyUpdateStarts = ({ docId, getServiceData }) => {
     }
 
     setStartDate(`${year}/${month}/${day}`);
-    setStartTime(`${hour}:${minute}:${second}`);    
+    setStartTime(`${hour}:${minute}:${second}`);   
   }
   
-  const updateStartTimeAndDate = async() => {
-    await updateDoc(serviceDocRef, {
+  const KMS = async () => {
+    setIsDisabled(true)
+   await addDoc(colRef, {
       startDate: startDate,
       startTime: startTime,
-    })
-    getServiceData();
-  
-  }
+     });
+   
+   getServiceData();
+ }
+
 
  useEffect(() => {
   getTimeAndDate();
- })
- 
+});
+
   return (
-    <button onClick={updateStartTimeAndDate} style={{background: "green", color: "white"}}>Szolgálatba lépés</button>
+    <form onSubmit={handleSubmit(KMS)}>
+      <input disabled={isDisabled} type="submit" value="Szolgálatba Lépés" />
+     <button style={{background: "green", color: "white"}}>Szolgálatba lépés</button>
+    </form>
   )
 }
 

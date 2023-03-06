@@ -18,12 +18,10 @@ const SignUpLogIn = () => {
 
   const onCreateService = async (userCred) => {
     await addDoc(serviceRef, {
-      startDate: "2023/01/01",
-      endDate: "2023/02/02",
-      startTime: 1,
-      endTime: 1,
       userId: userCred,
       username: username,
+      dutyTime: 0,
+      kms: "",
     });
   }
 

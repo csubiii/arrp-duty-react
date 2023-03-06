@@ -32,9 +32,10 @@ const Duty = () => {
           <div key={a.id}>
             <h1>Üdv! {a.username}</h1>
             <p>Utolsó elindítás ideje: {a.startDate} {a.startTime}</p>
-            <DutyUpdateStarts getServiceData={getServiceData} docId={a.id} />
+            <DutyUpdateStarts username={a.username} getServiceData={getServiceData} docId={a.id} />
             <p>Utolsó leadás ideje: {a.endDate} {a.endTime}</p>
             <DutyUpdateEnds getServiceData={getServiceData} docId={a.id} />
+            <p>Szolgálati időd összesen: {a.dutyTime}</p>
             <div><LogOut /></div>
         </div>
         )
