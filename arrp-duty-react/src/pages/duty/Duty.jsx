@@ -18,6 +18,7 @@ const Duty = () => {
   const getServiceData = async () => {
     const data = await getDocs(q)
     setServiceDataList(data.docs.map((doc) => ({...doc.data(), id: doc.id})))
+    console.log(serviceDataList)
   }
 
   useEffect(() => {

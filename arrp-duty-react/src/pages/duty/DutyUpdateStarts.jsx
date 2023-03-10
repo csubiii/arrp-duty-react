@@ -6,9 +6,9 @@ import { useForm } from "react-hook-form";
 
 const DutyUpdateStarts = ({ docId, getServiceData, username }) => {
 
-  const [ startDate, setStartDate ] = useState(0)
-  const [ startTime, setStartTime ] = useState(0)
-  const [ isDisabled, setIsDisabled ] = useState(false)
+  const [ startDate, setStartDate ] = useState(0);
+  const [ startTime, setStartTime ] = useState(0);
+  const [ isDisabled, setIsDisabled ] = useState(false);
   const { handleSubmit } = useForm();
 
   const [user] = useAuthState(auth);
@@ -46,8 +46,8 @@ const DutyUpdateStarts = ({ docId, getServiceData, username }) => {
     setStartTime(`${hour}:${minute}:${second}`);   
   }
   
-  const KMS = async () => {
-    setIsDisabled(true)
+  const addStartTimeAndDate = async () => {
+    setIsDisabled(true);
    await addDoc(colRef, {
       startDate: startDate,
       startTime: startTime,
@@ -62,9 +62,8 @@ const DutyUpdateStarts = ({ docId, getServiceData, username }) => {
 });
 
   return (
-    <form onSubmit={handleSubmit(KMS)}>
-      <input disabled={isDisabled} type="submit" value="Szolgálatba Lépés" />
-     <button style={{background: "green", color: "white"}}>Szolgálatba lépés</button>
+    <form onSubmit={handleSubmit(addStartTimeAndDate)}>
+      <input style={{background: "green", color: "white"}} disabled={isDisabled} type="submit" value={isDisabled ? "Sikeres Belépés" : "Szolgálatba Lépés"} />
     </form>
   )
 }

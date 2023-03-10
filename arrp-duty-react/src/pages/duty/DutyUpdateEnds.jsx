@@ -45,6 +45,7 @@ const DutyUpdateEnds = ({ docId,  getServiceData }) => {
       endTime: endTime,
     })
     getServiceData();
+    window.location.reload(false);
   }
 
  useEffect(() => {
@@ -54,7 +55,7 @@ const DutyUpdateEnds = ({ docId,  getServiceData }) => {
 
   return (
     <>
-      <button onClick={updateEndTimeAndDate} style={{background: "red", color: "white"}}>Szolgálatba leadás</button>
+      <button onClick={updateEndTimeAndDate} style={{background: "red", color: "white"}}>Szolgálat leadás</button>
     </>
 
     
