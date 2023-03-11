@@ -1,10 +1,11 @@
 import { useAuthState } from "react-firebase-hooks/auth";
 import { addDoc, collection, doc, query, where } from "firebase/firestore"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { db, auth } from "../../config/firebase"
 import { useForm } from "react-hook-form";
+import DutyUpdateEnds from "./DutyUpdateEnds";
 
-const DutyUpdateStarts = ({ docId, getServiceData, username }) => {
+const DutyUpdateStarts = ({ docId, getServiceData, username, handleStart, timer, formatTime }) => {
 
   const [ startDate, setStartDate ] = useState(0);
   const [ startTime, setStartTime ] = useState(0);
@@ -13,9 +14,7 @@ const DutyUpdateStarts = ({ docId, getServiceData, username }) => {
 
   const [user] = useAuthState(auth);
   const docRef = doc(db, "Service", docId);
-  const colRef = collection(docRef, `${username} SzolgálatbalépésDátuma`)
-
-
+  const colRef = collection(docRef, `${username} SzolgálatbalépésDátuma`);
   const getTimeAndDate = () => {
     
     let currentDate = new Date()
@@ -52,7 +51,7 @@ const DutyUpdateStarts = ({ docId, getServiceData, username }) => {
       startDate: startDate,
       startTime: startTime,
      });
-   
+   handleStart();
    getServiceData();
  }
 
@@ -62,9 +61,11 @@ const DutyUpdateStarts = ({ docId, getServiceData, username }) => {
 });
 
   return (
+    <>
     <form onSubmit={handleSubmit(addStartTimeAndDate)}>
       <input style={{background: "green", color: "white"}} disabled={isDisabled} type="submit" value={isDisabled ? "Sikeres Belépés" : "Szolgálatba Lépés"} />
     </form>
+    </>
   )
 }
 

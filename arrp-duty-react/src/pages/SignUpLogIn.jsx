@@ -21,7 +21,6 @@ const SignUpLogIn = () => {
       userId: userCred,
       username: username,
       dutyTime: 0,
-      kms: "",
     });
   }
 
@@ -32,12 +31,11 @@ const SignUpLogIn = () => {
       .then((userCredential) => {
         // Signed in 
         const userCred = userCredential.user.uid;
-        console.log(userCredential.user)
         onCreateService(userCred);
         // ...
       })
       .catch((error) => {
-        console.log(error.code)
+       alert(error.code)
       });
 
   }
@@ -51,7 +49,7 @@ const SignUpLogIn = () => {
         // ...
       })
       .catch((error) => {
-        console.log(error.code)
+        alert(error.code)
       });
 
   }

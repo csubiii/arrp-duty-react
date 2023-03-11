@@ -2,7 +2,7 @@ import { doc, updateDoc } from "firebase/firestore"
 import { useState, useEffect } from "react"
 import { db } from "../../config/firebase"
 
-const DutyUpdateEnds = ({ docId,  getServiceData }) => {
+const DutyUpdateEnds = ({ docId,  getServiceData, timer, dutyTime }) => {
 
   const [ endDate, setEndDate] = useState(0);
   const [ endTime, setEndTime] = useState(0);
@@ -43,6 +43,7 @@ const DutyUpdateEnds = ({ docId,  getServiceData }) => {
     await updateDoc(serviceDocRef, {
       endDate: endDate,
       endTime: endTime,
+      dutyTime: dutyTime + timer,
     })
     getServiceData();
     window.location.reload(false);
