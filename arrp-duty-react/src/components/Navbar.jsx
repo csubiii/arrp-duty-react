@@ -1,5 +1,6 @@
-import { auth } from '../config/firebase';
-import { useAuthState } from 'react-firebase-hooks/auth'
+import {auth} from '../config/firebase';
+import {Link} from 'react-router-dom';
+import {useAuthState} from 'react-firebase-hooks/auth'
 
 const Navbar = () => {
 
@@ -8,9 +9,9 @@ const Navbar = () => {
   return (
     <nav className='navbar'>
       <div className='navbar-contenet'>
-        <ul className='navbar-nav' >
-          <li className='navbar-item'>
-            <p>ARRP-DUTY</p>
+        <ul className='navbar-nav'>
+          <li>
+            { user ? <Link className='link-style' to="/ranglista">Ranglista</Link> : <Link className='link-style' to="/">ARRP-DUTY</Link> }
           </li>
         </ul>
       </div>

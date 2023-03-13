@@ -55,13 +55,17 @@ const SignUpLogIn = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit(createUser)}>
-    <input type="text" placeholder="IC NÉV" onChange={(e) => setUsername(e.target.value)} />
-    <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
-    <input type="password" placeholder="Jelszó" onChange={(e) => setPassword(e.target.value)} />
-    <input type="submit" value="Regisztráció" />
-    <button onClick={signIn}>Bejelentkezés</button>
-    </form>
+    <div className="login-page">
+      <div className="form">
+        <form className="register-form" onSubmit={handleSubmit(createUser)}>
+        <input type="text" placeholder="IC NÉV" onChange={(e) => setUsername(e.target.value)} />
+        <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
+        <input type="password" placeholder="Jelszó" onChange={(e) => setPassword(e.target.value)} />
+        <input className="register-btn" type="submit" value="Regisztráció" />
+        <button onClick={signIn}>Bejelentkezés</button>
+        </form>
+      </div>
+    </div>
   )
 }
 

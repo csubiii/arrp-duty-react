@@ -56,7 +56,7 @@ const DutyUpdateEnds = ({ docId,  getServiceData, timer, dutyTime }) => {
 
   return (
     <>
-      <button onClick={updateEndTimeAndDate} style={{background: "red", color: "white"}}>Szolgálat leadás</button>
+      <button className="duty-ends-btn" onClick={updateEndTimeAndDate}>Szolgálat leadás</button>
     </>
 
     

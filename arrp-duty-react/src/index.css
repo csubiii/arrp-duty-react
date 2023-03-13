@@ -1,4 +1,5 @@
 * {
+  font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -16,8 +17,7 @@
   background-color: #3546e2;
 }
 
-.navbar-nav,
-.navbar-item {
+.navbar-nav {
   list-style-type: none;
   background-color: #5585ff;
   text-align: center;
@@ -27,29 +27,198 @@
   color: white;
 }
 
+.navbar-nav li {
+  display: flex;
+  align-items: center;
+  height: 30px;
+}
 
-.login-btn,
-.logout-btn {
-  border: none;
-  outline: none;
-  background: transparent;
+.navbar-nav li .link-style {
+  text-decoration: none;
   color: white;
 }
 
-.login-btn:hover,
-.logout-btn:hover {
-  color: black;
-  transition: 250ms;
-  -webkit-transition: 250ms;
-  -moz-transition: 250ms;
-  -ms-transition: 250ms;
-  -o-transition: 250ms;
+.navbar-nav li .link-style:hover {
+  color: #f2f2f2;
+  transition: 300ms ease;
+  -webkit-transition: 300ms ease;
+  -moz-transition: 300ms ease;
+  -ms-transition: 300ms ease;
+  -o-transition: 300ms ease;
 }
 
 /* NAVBAR END */
 
+/* FORM START */
+
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.form {
+  border-radius: 15px;
+  position: fixed;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+.form input {
+  border-radius: 15px;
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+.form button,
+.form .register-btn {
+  border-radius: 15px;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #5585ff;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #ffffff;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+
+.form button:hover,.form button:active,.form button:focus, .form .register-btn:hover, .form .register-btn:active, .form .register-btn:focus {
+  background: #3546e2;
+  transition: 300ms ease;
+  -webkit-transition: 300ms ease;
+  -moz-transition: 300ms ease;
+  -ms-transition: 300ms ease;
+  -o-transition: 300ms ease;
+}
+
+/* FORM END */
+
 /* DUTY */
 
+.duty-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 360px;
+  margin: 1% auto;
+}
 
+.duty-time,
+.duty-end-date,
+.duty-time-all,
+.logout-btn,
+.duty-starts-form-submit,
+.duty-ends-btn {
+  width: 370px;
+  height: 35px;
+  background-color: lightgray;
+  padding: 10px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+.duty-starts-form-submit,
+.logout-btn,
+.duty-ends-btn {
+  color: white;
+  border: none;
+  width: 370px;
+}
+
+ .duty-ends-btn,
+ .logout-btn {
+  background-color: #ff002b;
+}
+
+.duty-starts-form-submit {
+  background-color: green;
+}
+
+.duty-ends-btn:hover, .duty-ends-btn:active, .duty-ends-btn:focus, .logout-btn:hover, .logout-btn:active, .logout-btn:focus, .duty-starts-form-submit:hover, .duty-starts-form-submit:active, .duty-starts-form-submit:focus {
+  opacity: 0.8;
+  transition: 300ms ease;
+  -webkit-transition: 300ms ease;
+  -moz-transition: 300ms ease;
+  -ms-transition: 300ms ease;
+  -o-transition: 300ms ease;
+}
 
 /* DUTY END */
+
+/* LEADERBOARD START */
+
+.leaderboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 360px;
+  margin: 10px auto;
+}
+
+.leaderboard-container li {
+  list-style-type: none;
+}
+
+/* LEADERBOARD END   */
+
+/* QUERIES */
+
+@media screen and (max-width: 430px) {
+  .login-page,
+  .form,
+  .duty-container,
+  .duty-time,
+  .duty-end-date,
+  .duty-time-all,
+  .logout-btn,
+  .duty-starts-form-submit,
+  .duty-ends-btn,
+  .leaderboard-container
+   {
+    width: 285px;
+  }
+
+  .duty-container,
+  .duty-time,
+  .duty-end-date,
+  .duty-time-all,
+  .logout-btn,
+  .duty-starts-form-submit,
+  .duty-ends-btn {
+    font-size: 12.4px;
+  }
+}
