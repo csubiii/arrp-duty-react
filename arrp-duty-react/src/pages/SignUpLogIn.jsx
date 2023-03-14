@@ -25,21 +25,6 @@ const SignUpLogIn = () => {
   }
 
 
-  const createUser = () => {
-    
-    createUserWithEmailAndPassword(authGetApp, email, password)
-      .then((userCredential) => {
-        // Signed in 
-        const userCred = userCredential.user.uid;
-        onCreateService(userCred);
-        // ...
-      })
-      .catch((error) => {
-       alert(error.code)
-      });
-
-  }
-
   const signIn = () => {
   
     signInWithEmailAndPassword(auth, email, password)
@@ -50,6 +35,21 @@ const SignUpLogIn = () => {
       })
       .catch((error) => {
         alert(error.code)
+      });
+
+  }
+
+  const createUser = () => {
+    
+    createUserWithEmailAndPassword(authGetApp, email, password)
+      .then((userCredential) => {
+        // Signed in 
+        const userCred = userCredential.user.uid;
+        onCreateService(userCred);
+        // ...
+      })
+      .catch((error) => {
+       
       });
 
   }
