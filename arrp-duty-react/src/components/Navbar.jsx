@@ -13,9 +13,11 @@ const Navbar = () => {
           <li className='navbar-nav-list'>
           <Link className='link-style' to="/">ARRP-DUTY</Link>
           </li>
-          <li className='navbar-nav-list'>
-           <Link className='link-style' to="/ranglista">Ranglista</Link>
-          </li>
+          {
+            user && <li className='navbar-nav-list'>
+            <Link className='link-style' to="/ranglista">Ranglista</Link>
+           </li>
+          }
         </ul>
       </div>
     </nav>
