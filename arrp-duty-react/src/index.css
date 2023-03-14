@@ -18,13 +18,17 @@
 }
 
 .navbar-nav {
+  display: flex;
   list-style-type: none;
-  background-color: #5585ff;
   text-align: center;
+}
+
+.navbar-nav-list {
   border-radius: 15px;
   margin: 5px;
   padding: 5px 30px;
   color: white;
+  background-color: #5585ff;
 }
 
 .navbar-nav li {

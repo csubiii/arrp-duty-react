@@ -10,8 +10,11 @@ const Navbar = () => {
     <nav className='navbar'>
       <div className='navbar-contenet'>
         <ul className='navbar-nav'>
-          <li>
-            { user ? <Link className='link-style' to="/ranglista">Ranglista</Link> : <Link className='link-style' to="/">ARRP-DUTY</Link> }
+          <li className='navbar-nav-list'>
+          <Link className='link-style' to="/">ARRP-DUTY</Link>
+          </li>
+          <li className='navbar-nav-list'>
+           <Link className='link-style' to="/ranglista">Ranglista</Link>
           </li>
         </ul>
       </div>
