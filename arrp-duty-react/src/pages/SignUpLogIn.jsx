@@ -62,8 +62,8 @@ const SignUpLogIn = () => {
         <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
         <input type="password" placeholder="Jelszó" onChange={(e) => setPassword(e.target.value)} />
         <input className="register-btn" type="submit" value="Regisztráció" />
-        <button onClick={signIn}>Bejelentkezés</button>
         </form>
+        <button onClick={signIn}>Bejelentkezés</button>
       </div>
     </div>
   )
