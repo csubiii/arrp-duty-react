@@ -12,13 +12,20 @@ const Duty = () => {
   const serviceRef = collection(db, "Service");
 
   const [ serviceDataList, setServiceDataList ] = useState([]);
-  const [timer, setTimer] = useState(0);
-  const countRef = useRef(null);
+  const [count, setCount] = useState(0);
+  const requestRef = useRef();
+  const previousTimeRef = useRef();
 
-  const handleStart = () => {
-    countRef.current = setInterval(() => {
-      setTimer((timer) => timer + 1)
-    }, 1000)
+  const animate = time => {
+    if (previousTimeRef.current != undefined) {
+      const deltaTime = time - previousTimeRef.current;
+      
+      // Pass on a function to the setter of the state
+      // to make sure we always have the latest state
+      setCount(prevCount => (prevCount + deltaTime * 0.001) % 99999);
+    }
+    previousTimeRef.current = time;
+    requestRef.current = requestAnimationFrame(animate);
   }
 
   const q = query(serviceRef, where("userId", "==", user.uid))
@@ -40,10 +47,10 @@ const Duty = () => {
         return (
           <div className="duty-container" key={list.id}>
             <h1>Üdv! {list.username}</h1>
-            <p className="duty-time">Szolgálatban töltött idő: {Math.floor(timer % (3600*24) / 3600)} óra {Math.floor(timer % 3600 / 60)} perc {Math.floor(timer % 60)} mp</p>
-            <DutyUpdateStarts handleStart={handleStart} username={list.username} getServiceData={getServiceData} docId={list.id} />
+            <p className="duty-time">Szolgálatban töltött idő: {Math.floor(count % (3600*24) / 3600)} óra {Math.floor(count % 3600 / 60)} perc {Math.floor(count % 60)} mp</p>
+            <DutyUpdateStarts animate={animate} username={list.username} getServiceData={getServiceData} docId={list.id} />
             <p className="duty-end-date">Utolsó leadás ideje: {list.endDate || "2023/01/01"} {list.endTime || "00:00:00"}</p>
-            <DutyUpdateEnds dutyTime={list.dutyTime} timer={timer} getServiceData={getServiceData} docId={list.id} />
+            <DutyUpdateEnds dutyTime={list.dutyTime} username={list.username} count={Math.round(count)} getServiceData={getServiceData} docId={list.id} />
             <p className="duty-time-all">Szolgálati időd összesen: {Math.floor(list.dutyTime % (3600*24) / 3600)} óra {Math.floor(list.dutyTime % 3600 / 60)} perc {Math.floor(list.dutyTime % 60)} mp</p>
             <div><LogOut /></div>
         </div>

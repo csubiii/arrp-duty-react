@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import { db, auth } from "../../config/firebase"
 import { useForm } from "react-hook-form";
 
-const DutyUpdateStarts = ({ docId, getServiceData, username, handleStart }) => {
+const DutyUpdateStarts = ({ docId, getServiceData, username, animate }) => {
 
   const [ startDate, setStartDate ] = useState(0);
   const [ startTime, setStartTime ] = useState(0);
@@ -50,7 +50,7 @@ const DutyUpdateStarts = ({ docId, getServiceData, username, handleStart }) => {
       startDate: startDate,
       startTime: startTime,
      });
-   handleStart();
+     animate();
    getServiceData();
  }
 

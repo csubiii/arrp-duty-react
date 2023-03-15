@@ -1,13 +1,18 @@
-import { doc, updateDoc } from "firebase/firestore"
+import { useAuthState } from "react-firebase-hooks/auth";
+import { addDoc, collection, doc, updateDoc } from "firebase/firestore"
 import { useState, useEffect } from "react"
-import { db } from "../../config/firebase"
+import { db, auth } from "../../config/firebase"
+import { useForm } from "react-hook-form";
 
-const DutyUpdateEnds = ({ docId,  getServiceData, timer, dutyTime }) => {
+const DutyUpdateEnds = ({ docId,  getServiceData, count, dutyTime, username }) => {
 
   const [ endDate, setEndDate] = useState(0);
   const [ endTime, setEndTime] = useState(0);
+  const { handleSubmit } = useForm();
 
-  const serviceDocRef = doc(db, 'Service', docId)
+  const [user] = useAuthState(auth);
+  const docRef = doc(db, "Service", docId);
+  const colRef = collection(docRef, `${username} SzolgálatKilépésDátuma`);
 
   const getTimeAndDate = () => {
     
@@ -40,14 +45,22 @@ const DutyUpdateEnds = ({ docId,  getServiceData, timer, dutyTime }) => {
   }
   
   const updateEndTimeAndDate = async() => {
-    await updateDoc(serviceDocRef, {
+    await updateDoc(docRef, {
       endDate: endDate,
       endTime: endTime,
-      dutyTime: dutyTime + timer,
+      dutyTime: dutyTime + count,
     })
     getServiceData();
     window.location.reload(false);
   }
+
+  const addEndTimeAndEnd = async () => {
+   await addDoc(colRef, {
+      endDate: endDate,
+      endTime: endTime,
+     });
+     updateEndTimeAndDate();
+ }
 
  useEffect(() => {
   getTimeAndDate();
@@ -56,7 +69,10 @@ const DutyUpdateEnds = ({ docId,  getServiceData, timer, dutyTime }) => {
 
   return (
     <>
-      <button className="duty-ends-btn" onClick={updateEndTimeAndDate}>Szolgálat leadás</button>
+     <form onSubmit={handleSubmit(addEndTimeAndEnd)}>
+      <input className="duty-ends-btn"  type="submit" value={"Szolgálat leadás"} />
+    </form>
+      {/* <button className="duty-ends-btn" onClick={updateEndTimeAndDate}>Szolgálat leadás</button> */}
     </>
 
     

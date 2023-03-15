@@ -3,6 +3,7 @@ import { auth, db } from "../config/firebase";
 import { useState, useEffect } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth'
 
+
 const Leaderboard = () => {
 
   const [user] = useAuthState(auth);
@@ -21,6 +22,8 @@ const Leaderboard = () => {
   
 
   return (
+    <>
+    { user ?
     <div>
     {leaderboardDataList.map((list) => {
       return (
@@ -34,6 +37,8 @@ const Leaderboard = () => {
       )
     })}
   </div>
+  :  <h1 style={{textAlign: "center"}} >Jelentkezz be kérlek</h1>}
+  </>
   )
 }
 
