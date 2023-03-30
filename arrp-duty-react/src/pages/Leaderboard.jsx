@@ -2,9 +2,12 @@ import {collection, getDocs} from 'firebase/firestore';
 import {auth, db} from "../config/firebase";
 import {useState, useEffect} from 'react';
 import {useAuthState} from 'react-firebase-hooks/auth'
+import { useNavigate } from "react-router-dom";
 
 
 const Leaderboard = () => {
+
+  const navigate = useNavigate();
 
   const [user] = useAuthState(auth);
   const serviceRef = collection(db, "Service");
@@ -25,7 +28,10 @@ const Leaderboard = () => {
 
 
   return (
-    <div className='leaderboard-container'>
+    <>
+      { user 
+      ?
+      <div className='leaderboard-container'>
       <ul>
       {
       leaderboardDataList.map((list) => {
@@ -43,6 +49,9 @@ const Leaderboard = () => {
     } 
       </ul>
     </div>
+      : navigate("/")
+      }
+    </>
   )
 }
 
