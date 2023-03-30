@@ -1,7 +1,7 @@
 import { useAuthState } from "react-firebase-hooks/auth"
 import { auth, db } from "../../config/firebase";
 import { collection, getDocs, query, where } from "firebase/firestore";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useEffect, useState, useRef } from "react";
 import DutyUpdateEnds from "./DutyUpdateEnds";
 import DutyUpdateStarts from "./DutyUpdateStarts";
@@ -10,6 +10,8 @@ import Leaderboard from "../Leaderboard";
 
 const Duty = () => {
 
+  const navigate = useNavigate()
+  
   const [user] = useAuthState(auth);
   const serviceRef = collection(db, "Service");
 
@@ -17,6 +19,14 @@ const Duty = () => {
   const [count, setCount] = useState(0);
   const requestRef = useRef();
   const previousTimeRef = useRef();
+
+   function handleConfirm() {
+    if (confirm("Akkor nézd meg a statisztikát ha jelenleg nem vagy szolgálatban!") == true) {
+      navigate("/ranglista")
+    } else {
+      return
+    }
+   }
 
   const animate = time => {
     if (previousTimeRef.current != undefined) {
@@ -60,7 +70,8 @@ const Duty = () => {
                 <div className="duty-side-items">
                 <p className="duty-time-all">Szolgálati időd összesen: {Math.floor(list.dutyTime % (3600*24) / 3600)} óra {Math.floor(list.dutyTime % 3600 / 60)} perc {Math.floor(list.dutyTime % 60)} mp</p>
                   <a href="https://www.google.com/forms/about/" target="_blank" className="report-btn" >Hibabejelentés</a>
-                  <Link className='leaderboard-btn' to="/ranglista">Szolgálati Statisztika</Link>
+                  {/*<Link className='leaderboard-btn' to="/ranglista" onClick={() => confirm("Akkor nézd meg a statisztikát ha jelenleg nem vagy szolgálatban!")}>Szolgálati Statisztika</Link>*/}
+                  <button className="leaderboard-btn" onClick={handleConfirm}>Szolgálati Statisztika</button>
                   <LogOut />
                 </div>
               </div>
