@@ -239,8 +239,13 @@
 
 /* LEADERBOARD START */
 
+
 .leaderboard-container {
   margin: 1% auto;
+}
+
+.leaderboard-container h1 {
+  padding-bottom: 1%;
 }
 
 .leaderboard-container,
@@ -267,7 +272,13 @@
   -moz-border-radius: 15px;
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
+  width: 370px;
+}
 
+.leaderboard-container ul li p {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 

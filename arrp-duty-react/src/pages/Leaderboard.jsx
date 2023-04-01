@@ -32,16 +32,17 @@ const Leaderboard = () => {
       { user 
       ?
       <div className='leaderboard-container'>
+        <h1>Statisztika</h1>
       <ul>
       {
-      leaderboardDataList.map((list) => {
+      leaderboardDataList.map((list, id) => {
         return (
           
             <li key={
-              list.id
+              id
             }>
              <p>
-              {list.username} {Math.floor(list.dutyTime % (3600*24) / 3600)} óra {Math.floor(list.dutyTime % 3600 / 60)} perc {Math.floor(list.dutyTime % 60)} mp
+              {list.username} <span>{Math.floor(list.dutyTime % (3600*24) / 3600)} óra {Math.floor(list.dutyTime % 3600 / 60)} perc {Math.floor(list.dutyTime % 60)} mp</span>
             </p>
             </li>
         )
