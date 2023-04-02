@@ -68,7 +68,7 @@ const Duty = () => {
             </div>
               <div className="duty-side">
                 <div className="duty-side-items">
-                <p className="duty-time-all">Szolgálati időd összesen: {Math.floor(list.dutyTime % (3600*24) / 3600)} óra {Math.floor(list.dutyTime % 3600 / 60)} perc {Math.floor(list.dutyTime % 60)} mp</p>
+                <p className="duty-time-all">Szolgálati időd összesen: {Math.floor(list.dutyTime / 3600)} óra {Math.floor(list.dutyTime % 3600 / 60)} perc {Math.floor(list.dutyTime % 3600 % 60)} mp</p>
                   <a href="https://www.google.com/forms/about/" target="_blank" className="report-btn" >Hibabejelentés</a>
                   {/*<Link className='leaderboard-btn' to="/ranglista" onClick={() => confirm("Akkor nézd meg a statisztikát ha jelenleg nem vagy szolgálatban!")}>Szolgálati Statisztika</Link>*/}
                   <button className="leaderboard-btn" onClick={handleConfirm}>Szolgálati Statisztika</button>
