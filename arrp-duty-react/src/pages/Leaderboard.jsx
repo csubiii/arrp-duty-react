@@ -44,7 +44,7 @@ const Leaderboard = () => {
                 <td> {
                   list.username
                 } </td>
-                <td className='time'>{Math.floor(list.dutyTime % (3600*24) / 3600)} óra {Math.floor(list.dutyTime % 3600 / 60)} perc {Math.floor(list.dutyTime % 60)} mp</td>
+                <td className='time'>{Math.floor(list.dutyTime / 3600)} óra {Math.floor(list.dutyTime % 3600 / 60)} perc {Math.floor(list.dutyTime % 3600 % 60)} mp</td>
               </tr>
             )
           })
