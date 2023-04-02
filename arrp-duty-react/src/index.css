@@ -193,6 +193,7 @@
   color: white;
   background-color: #5585ff;
   border: none;
+  font-size: 16px;
 }
 
 .duty-starts-form-submit,
@@ -201,6 +202,7 @@
   color: white;
   border: none;
   width: 370px;
+  font-size: 16px;
 }
 
  .duty-ends-btn,
@@ -239,46 +241,45 @@
 
 /* LEADERBOARD START */
 
-
-.leaderboard-container {
+table.table {
   margin: 1% auto;
-}
-
-.leaderboard-container h1 {
-  padding-bottom: 1%;
-}
-
-.leaderboard-container,
-.leaderboard-container ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.leaderboard-container ul {
-  list-style-type: none;
-  gap: 10px
-}
-
-.leaderboard-container ul li {
-  text-align: center;
-  text-decoration: none;
-  color: white;
   background-color: #5585ff;
+  width: 450px;
+  text-align: left;
+  border-collapse: collapse;
+  color: white;
+}
+table.table td, table.table th {
+  border: 1px solid #ffffff;
   padding: 10px;
-  border-radius: 15px;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -o-border-radius: 15px;
-  width: 370px;
+}
+table.table tbody td {
+  font-size: 16px;
 }
 
-.leaderboard-container ul li p {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+table.table .time {
+  text-align: right;
+}
+
+table.table tr:nth-child(even) {
+  background: #5585ff;
+}
+table.table thead {
+  background: #3546e2;
+  background: -moz-linear-gradient(top, #3546e2 0%, #5585ff 100%);
+  background: -webkit-linear-gradient(top, #3546e2 0%, #5585ff 100%);
+  background: linear-gradient(to bottom, #3546e2 0%, #5585ff 100%);
+  border-bottom: 2px solid #ffffff;
+}
+table.table thead th {
+  font-size: 20px;
+  font-weight: bold;
+  color: #FFFFFF;
+  border-left: 2px solid #ffffff;
+  text-align: center;
+}
+table.table thead th:first-child {
+  border-left: none;
 }
 
 
@@ -298,7 +299,7 @@
   .duty-ends-btn,
   .duty-side-items,
   .report-btn,
-  .leaderboard-btn
+  table.table
    {
     width: 285px;
   }
@@ -311,10 +312,23 @@
   .duty-starts-form-submit,
   .duty-ends-btn,
   .report-btn,
-  .leaderboard-btn {
+  table.table tbody td  {
     font-size: 12.4px;
   }
+
+  table.table td, table.table th {
+    padding: 8px;
+  }
+
 }
+
+@media screen and (max-width: 300px) {
+  table.table
+   {
+    width: 250px;
+  }
+}
+
 
 @media screen and (max-width: 900px) {
   .duty-container {
