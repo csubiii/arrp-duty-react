@@ -28,7 +28,8 @@ const Duty = () => {
     }
    }
 
-  const animate = time => {
+  const animate = ( time, isStop) => {
+    
     if (previousTimeRef.current != undefined) {
       const deltaTime = time - previousTimeRef.current;
       
@@ -38,6 +39,10 @@ const Duty = () => {
     }
     previousTimeRef.current = time;
     requestRef.current = requestAnimationFrame(animate);
+
+    if(isStop) {
+      return
+    }
   }
 
   const q = query(serviceRef, where("userId", "==", user.uid))
@@ -64,7 +69,7 @@ const Duty = () => {
               <p className="duty-time">Szolgálatban töltött idő: {Math.floor(count % (3600*24) / 3600)} óra {Math.floor(count % 3600 / 60)} perc {Math.floor(count % 60)} mp</p>
               <DutyUpdateStarts animate={animate} username={list.username} getServiceData={getServiceData} docId={list.id} />
               <p className="duty-end-date">Utolsó leadás ideje: {list.endDate || "2023/01/01"} {list.endTime || "00:00:00"}</p>
-              <DutyUpdateEnds dutyTime={list.dutyTime} username={list.username} count={Math.round(count)} getServiceData={getServiceData} docId={list.id} />
+              <DutyUpdateEnds animate={animate} dutyTime={list.dutyTime} username={list.username} count={Math.round(count)} getServiceData={getServiceData} docId={list.id} />
             </div>
               <div className="duty-side">
                 <div className="duty-side-items">

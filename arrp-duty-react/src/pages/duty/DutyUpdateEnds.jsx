@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import { db, auth } from "../../config/firebase"
 import { useForm } from "react-hook-form";
 
-const DutyUpdateEnds = ({ docId,  getServiceData, count, dutyTime, username }) => {
+const DutyUpdateEnds = ({ docId,  getServiceData, count, dutyTime, username, animate }) => {
 
   const [ endDate, setEndDate] = useState(0);
   const [ endTime, setEndTime] = useState(0);
@@ -51,7 +51,8 @@ const DutyUpdateEnds = ({ docId,  getServiceData, count, dutyTime, username }) =
       dutyTime: dutyTime + count,
     })
     getServiceData();
-    window.location.reload(false);
+    animate( null, true);
+    window.location.reload();
   }
 
   const addEndTimeAndEnd = async () => {
