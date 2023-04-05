@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 
 const DutyUpdateEnds = ({ docId,  getServiceData, count, dutyTime, username, animate }) => {
 
+  const [ isHidden, setIsHidden ] = useState(false);
   const [ endDate, setEndDate] = useState(0);
   const [ endTime, setEndTime] = useState(0);
   const { handleSubmit } = useForm();
@@ -45,6 +46,9 @@ const DutyUpdateEnds = ({ docId,  getServiceData, count, dutyTime, username, ani
   }
   
   const updateEndTimeAndDate = async() => {
+    setIsHidden(true)
+    animate(0, true);
+
     await updateDoc(docRef, {
       endDate: endDate,
       endTime: endTime,
@@ -53,7 +57,6 @@ const DutyUpdateEnds = ({ docId,  getServiceData, count, dutyTime, username, ani
     getServiceData();
     
     window.location.reload();
-    animate(0, true);
   }
 
   const addEndTimeAndEnd = async () => {
@@ -71,7 +74,7 @@ const DutyUpdateEnds = ({ docId,  getServiceData, count, dutyTime, username, ani
 
   return (
     <>
-     <form onSubmit={handleSubmit(addEndTimeAndEnd)}>
+     <form hidden={isHidden} onSubmit={handleSubmit(addEndTimeAndEnd)}>
       <input className="duty-ends-btn"  type="submit" value={"Szolgálat leadás"} />
     </form>
       {/* <button className="duty-ends-btn" onClick={updateEndTimeAndDate}>Szolgálat leadás</button> */}
