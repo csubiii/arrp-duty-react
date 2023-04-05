@@ -50,7 +50,7 @@ const DutyUpdateStarts = ({ docId, getServiceData, username, animate }) => {
       startDate: startDate,
       startTime: startTime,
      });
-     animate(0.001, true);
+     animate();
    getServiceData();
  }
 
