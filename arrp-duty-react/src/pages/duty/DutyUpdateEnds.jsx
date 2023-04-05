@@ -51,8 +51,9 @@ const DutyUpdateEnds = ({ docId,  getServiceData, count, dutyTime, username, ani
       dutyTime: dutyTime + count,
     })
     getServiceData();
-    animate(0, true);
+    
     window.location.reload();
+    animate(0, true);
   }
 
   const addEndTimeAndEnd = async () => {
