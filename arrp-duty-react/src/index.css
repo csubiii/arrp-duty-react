@@ -285,6 +285,16 @@ table.table thead th:first-child {
 
 /* LEADERBOARD END */
 
+/* maintenance-text */
+
+.maintenance-text {
+  margin-top: 1%;
+  text-align: center;
+}
+
+/* maintenance-text */
+
+
 /* QUERIES */
 
 @media screen and (max-width: 430px) {
