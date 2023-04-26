@@ -60,11 +60,11 @@ const DutyUpdateEnds = ({ docId,  getServiceData, count, dutyTime, username, ani
   }
 
   const addEndTimeAndEnd = async () => {
-   await addDoc(colRef, {
+    await addDoc(colRef, {
       endDate: endDate,
       endTime: endTime,
-     });
-     updateEndTimeAndDate();
+    });
+    updateEndTimeAndDate();
  }
 
  useEffect(() => {
