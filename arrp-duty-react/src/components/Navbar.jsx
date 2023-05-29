@@ -10,9 +10,11 @@ const Navbar = () => {
     <nav className='navbar'>
       <div className='navbar-contenet'>
         <ul className='navbar-nav'>
+        <Link className='link-style' to="/">
           <li className='navbar-nav-list'>
-          <Link className='link-style' to="/">ARRP-DUTY</Link>
+            <p>ARRP-DUTY</p>
           </li>
+          </Link>
         </ul>
       </div>
     </nav>

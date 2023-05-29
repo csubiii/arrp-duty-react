@@ -4,6 +4,7 @@ import './App.css'
 import Navbar from './components/Navbar'
 import Leaderboard from './pages/Leaderboard';
 import Main from './pages/Main';
+import ArchivedDutys from './pages/archive/ArchivedDutys';
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Main/>} />
           <Route path="/ranglista" element={<Leaderboard/>} />
+          <Route path="/archívum" element={<ArchivedDutys/>} />
           <Route path="*" element={<Main/>} />
         </Routes>
       </BrowserRouter>
