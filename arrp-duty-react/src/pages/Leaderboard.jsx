@@ -30,7 +30,6 @@ const Leaderboard = () => {
     <>
       {user ? (
         <>
-          <Link to={"/archívum"} className="archived">Arhivált Idők</Link>
           <table className="table">
             <thead>
               <tr>

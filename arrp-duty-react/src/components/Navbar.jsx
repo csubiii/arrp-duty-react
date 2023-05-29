@@ -15,6 +15,11 @@ const Navbar = () => {
             <p>ARRP-DUTY</p>
           </li>
           </Link>
+          <Link to={"/archívum"} className='link-style'>
+          <li className='navbar-nav-list'>
+            <p>Archivált Idők</p>
+          </li>
+          </Link>
         </ul>
       </div>
     </nav>
