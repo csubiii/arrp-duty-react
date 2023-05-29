@@ -12,7 +12,7 @@ const Navbar = () => {
         <ul className='navbar-nav'>
         <Link className='link-style' to="/">
           <li className='navbar-nav-list'>
-            <p>ARRP-DUTY</p>
+            <p>Főoldal</p>
           </li>
           </Link>
           <Link to={"/archívum"} className='link-style'>
