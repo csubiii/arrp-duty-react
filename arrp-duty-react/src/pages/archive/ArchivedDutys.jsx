@@ -283,7 +283,7 @@ const ArchivedDutys = () => {
     {
       username: "Mano Maki",
       time: "00:00:00",
-      comment: "1. warn"
+      comment: "Szabadság"
     },
     {
       username: "James Bulger",
