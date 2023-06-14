@@ -343,6 +343,158 @@ const ArchivedDutys = () => {
    
   ];
 
+const dutyData5 = [
+    {
+      username: "Della Rocco",
+      time: "56:48:56",
+      comment: "Prémium I."
+    },
+    {
+       username: "Floyd Armando",
+       time: "01:21:13",
+       comment: "Ciklusbelépő"
+     },
+    {
+      username: "Lakatos Zolika",
+      time: "01:11:52",
+      comment: "Szabadság"
+    },
+    {
+      username: "Jonny Williems",
+      time: "00:00:00",
+      comment: "Felmondás"
+    },
+    {
+      username: "Gery Miler",
+      time: "00:29:09",
+      comment: "Felmondás"
+    },
+    {
+      username: "White Isaac",
+      time: "06:34:17",
+      comment: "Felmondás"
+    },
+    {
+      username: "Daniel White",
+      time: "02:44:03",
+      comment: "Felmondás"
+    },
+    {
+      username: "Rocky Rambo",
+      time: "00:00:00",
+      comment: "Szabadság"
+    },
+    {
+      username: "James Watson",
+      time: "00:00:00",
+      comment: "Felmondás"
+    },
+    {
+      username: "Noah Hill",
+      time: "04:15:29",
+      comment: "Szabadság"
+    },
+    {
+      username: "Seranko Natasha",
+      time: "07:53:07",
+      comment: "Felmondás"
+    },
+    {
+      username: "James Willson",
+      time: "09:32:39",
+      comment: "Szabadság"
+    },
+    {
+      username: "Conor Gibson",
+      time: "06:07:24",
+      comment: "Ciklusbelépő"
+    },
+    {
+      username: "Thomas Orosz",
+      time: "13:31:13",
+      comment: "-"
+    },
+    {
+      username: "Latorre Santiago",
+      time: "00:00:00",
+      comment: "3. Warn - Távozás"
+    },
+    {
+      username: "Lucifer Morningstar",
+      time: "00:00:00",
+      comment: "Szabadság"
+    },
+    {
+      username: "Jake Hill",
+      time: "03:16:42",
+      comment: "2. Warn"
+    },
+    {
+      username: "Mano Maki",
+      time: "11:38:29",
+      comment: "-"
+    },
+    {
+      username: "James Bulger",
+      time: "13:23:30",
+      comment: "-"
+    },
+    {
+      username: "Rantot Tamas",
+      time: "08:56:24",
+      comment: "Felmondás"
+    },
+    {
+      username: "Kiss Marco",
+      time: "11:46:03",
+      comment: "-"
+    },
+    {
+      username: "Lakatos Capy",
+      time: "00:00:00",
+      comment: "2. Warn"
+    },
+    {
+      username: "William Brown",
+      time: "00:00:00",
+      comment: "2. Warn"
+    },
+    {
+      username: "Matthew Hardy",
+      time: "00:00:00",
+      comment: "Szabadság"
+    },
+    {
+      username: "Kiss Peter",
+      time: "31:21:13",
+      comment: "Prémium II."
+    },
+    {
+      username: "Angster Jan",
+      time: "00:00:00",
+      comment: "Szabadság"
+    },
+    {
+      username: "Itadori Yuuji",
+      time: "00:00:00",
+      comment: "Szabadság"
+    },
+    {
+      username: "Kocsis Balint",
+      time: "-",
+      comment: "Nem regisztrált"
+    },
+    {
+      username: "Pablo Chris",
+      time: "-",
+      comment: "Nem regisztrált"
+    },
+    {
+      username: "John Hayden",
+      time: "-",
+      comment: "Nem regisztrált"
+    },
+];
   return (
     <div className="archived-container">
 
@@ -392,6 +544,28 @@ const ArchivedDutys = () => {
         </tbody>
       </table>
 
+      <table className="table">
+        <thead>
+            <th colspan="3">5. Ciklus - 05.29-06.14</th>
+          <tr>
+            <th>N&eacute;v</th>
+            <th>Idő</th>
+            <th>Megjegyzés</th>
+          </tr>
+        </thead>
+        <tbody>
+          {" "}
+          {dutyData5.map((data, id) => {
+            return (
+              <tr key={id}>
+                <td> {data.username} </td>
+                <td className="time">{data.time}</td>
+                <td className="time">{data.comment}</td>
+              </tr>
+            );
+          })}{" "}
+        </tbody>
+      </table>
     </div>
   );
 };
