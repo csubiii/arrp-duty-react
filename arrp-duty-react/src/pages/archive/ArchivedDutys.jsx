@@ -495,6 +495,149 @@ const dutyData5 = [
       comment: "Nem regisztrált"
     },
 ];
+const dutyData6 = [
+  {
+    username: "Pablo Chris",
+    time: "05:44:58",
+    comment: "Felmondás"
+  },
+  {
+    username: "Della Rocco",
+    time: "30:58:21",
+    comment: "Prémium I."
+  },
+  {
+    username: "Floyd Armando",
+    time: "01:36:59",
+    comment: "1. Warn"
+  },
+  {
+    username: "Lakatos Zolika",
+    time: "00:00:00",
+    comment: "1. Warn"
+  },
+  {
+    username: "Kiss Zsigmond",
+    time: "06:28:10",
+    comment: "Ciklusbelépő"
+  },
+  {
+    username: "Rocky Rambo",
+    time: "04:31:28",
+    comment: "Szabadság"
+  },
+  {
+    username: "Noah Hill",
+    time: "00:00:00",
+    comment: "Szabadság"
+  },
+  {
+    username: "Nap Pali",
+    time: "15:28:03",
+    comment: "-"
+  },
+  {
+    username: "James Willson",
+    time: "10:12:41",
+    comment: "-"
+  },
+  {
+    username: "Conor Gibson",
+    time: "00:00:00",
+    comment: "1. Warn"
+  },
+  {
+    username: "Thomas Orosz",
+    time: "00:00:00",
+    comment: "1. Warn"
+  },
+  {
+    username: "Lucifer Morningstar",
+    time: "00:00:00",
+    comment: "2. Warn"
+  },
+  {
+    username: "Jake Hill",
+    time: "00:00:00",
+    comment: "3. Warn - Távozás"
+  },
+  {
+    username: "Mano Maki",
+    time: "19:58:27",
+    comment: "-"
+  },
+  {
+    username: "John Hayden",
+    time: "03:05:33",
+    comment: "Felmondás"
+  },
+  {
+    username: "James Bulger",
+    time: "03:38:44",
+    comment: "1. Warn"
+  },
+  {
+    username: "Penki Gergo",
+    time: "64:08:46",
+    comment: "Felmondás"
+  },
+  {
+    username: "Kiss Marco",
+    time: "23:05:20",
+    comment: "Prémium III."
+  },
+  {
+    username: "Lakatos Capy",
+    time: "00:00:00",
+    comment: "Felmondás"
+  },
+  {
+    username: "William Brown",
+    time: "00:00:00",
+    comment: "3. Warn - Távozás"
+  },
+  {
+    username: "Matthew Hardy",
+    time: "00:00:00",
+    comment: "Szabadság"
+  },
+  {
+    username: "Kiss Peter",
+    time: "23:36:43",
+    comment: "Prémium II."
+  },
+  {
+    username: "Angster Jan",
+    time: "00:00:00",
+    comment: "2. Warn"
+  },
+  {
+    username: "Itadori Yuuji",
+    time: "00:00:00",
+    comment: "1. Warn"
+  },
+  {
+    username: "Kiss Krisztofer",
+    time: "14:10:15",
+    comment: "-"
+  },
+  {
+    username: "Enzo Said",
+    time: "03:27:04",
+    comment: "Felmondás"
+  },
+  {
+    username: "Kocsis Balint",
+    time: "-",
+    comment: "Kirúgás"
+  },
+  {
+    username: "John Deer",
+    time: "-",
+    comment: "Regisztráció hiánya"
+  },
+
+]
   return (
     <div className="archived-container">
 
@@ -566,6 +709,29 @@ const dutyData5 = [
           })}{" "}
         </tbody>
       </table>
+
+        <table className="table">
+        <thead>
+            <th colspan="3">6. Ciklus - 06.14-06.26</th>
+          <tr>
+            <th>N&eacute;v</th>
+            <th>Idő</th>
+            <th>Megjegyzés</th>
+          </tr>
+        </thead>
+        <tbody>
+          {" "}
+          {dutyData5.map((data, id) => {
+            return (
+              <tr key={id}>
+                <td> {data.username} </td>
+                <td className="time">{data.time}</td>
+                <td className="time">{data.comment}</td>
+              </tr>
+            );
+          })}{" "}
+        </tbody>
+        </table>
     </div>
   );
 };
