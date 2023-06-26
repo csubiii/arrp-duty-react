@@ -721,7 +721,7 @@ const dutyData6 = [
         </thead>
         <tbody>
           {" "}
-          {dutyData5.map((data, id) => {
+          {dutyData6.map((data, id) => {
             return (
               <tr key={id}>
                 <td> {data.username} </td>
