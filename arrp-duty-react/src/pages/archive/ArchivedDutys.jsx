@@ -637,8 +637,207 @@ const dutyData6 = [
     comment: "Regisztráció hiánya"
   },
 
+
 ]
-  return (
+const dutyData7 = [
+  {
+    username: "Della Rocco",
+    time: "22:56:28",
+    comment: "-"
+  },
+  {
+    username: "Floyd Armando",
+    time: "12:00:47",
+    comment: "-"
+  },
+  {
+    username: "Lakatos Zolika",
+    time: "00:00:00",
+    comment: "2. Warn"
+  },
+  {
+    username: "Ludas Matyi",
+    time: "09:39:39",
+    comment: "Ciklusbelépő"
+  },
+  {
+    username: "Olajos Feri",
+    time: "24:59:03",
+    comment: "-"
+  },
+  {
+    username: "II Puzser Abraham",
+    time: "10:25:13",
+    comment: "-"
+  },
+  {
+    username: "Daniel James",
+    time: "53:49:12",
+    comment: "Felmondás"
+  },
+  {
+    username: "Kemal Teglas",
+    time: "02:06:46",
+    comment: "Ciklusbelépő"
+  },
+  {
+    username: "Kiss Zsigmond",
+    time: "27:10:56",
+    comment: "-"
+  },
+  {
+    username: "Rocky Rambo",
+    time: "00:00:00",
+    comment: "Szabadság"
+  },
+  {
+    username: "John Deer",
+    time: "00:00:00",
+    comment: "Felmondás"
+  },
+  {
+    username: "Noah Hill",
+    time: "04:01:04",
+    comment: "1. Warn"
+  },
+  {
+    username: "Nap Pali",
+    time: "00:00:00",
+    comment: "Szabadság"
+  },
+  {
+    username: "Wernher von Braun",
+    time: "06:07:05",
+    comment: "Ciklusbelépő"
+  },
+  {
+    username: "Weimer Christian",
+    time: "43:10:15",
+    comment: "Prémium III."
+  },
+  {
+    username: "Nagy Norman",
+    time: "30:00:00",
+    comment: "-"
+  },
+  {
+    username: "Armando D Rodrigo",
+    time: "08:37:46",
+    comment: "Felmondás"
+  },
+  {
+    username: "James Willson",
+    time: "10:49:32",
+    comment: "-"
+  },
+  {
+    username: "Nagy Istvan",
+    time: "11:11:52",
+    comment: "-"
+  },
+  {
+    username: "Conor Gibson",
+    time: "05:42:47",
+    comment: "2. Warn"
+  },
+  {
+    username: "Nico Ferdmann",
+    time: "18:15:29",
+    comment: "-"
+  },
+  {
+    username: "Thomas Orosz",
+    time: "00:00:00",
+    comment: "2. Warn"
+  },
+  {
+    username: "Redd Jacob",
+    time: "34:11:55",
+    comment: "-"
+  },
+  {
+    username: "Scott Ferdmann",
+    time: "19:41:12",
+    comment: "-"
+  },
+  {
+    username: "Steve Jenkins",
+    time: "42:21:50",
+    comment: "Prémium IV."
+  },
+  {
+    username: "Lucifer Morningstar",
+    time: "00:00:00",
+    comment: "Felmondás"
+  },
+  {
+    username: "Tanacs Krisztian",
+    time: "07:22:09",
+    comment: "Ciklusbelépő"
+  },
+  {
+    username: "Mano Maki",
+    time: "39:22:41",
+    comment: "Prémium V."
+  },
+  {
+    username: "Burke Noel",
+    time: "56:35:43",
+    comment: "Prémium II."
+  },
+  {
+    username: "James Bulger",
+    time: "04:19:06",
+    comment: "Felmondás"
+  },
+  {
+    username: "Kiss Marco",
+    time: "36:24:04",
+    comment: "-"
+  },
+  {
+    username: "Matthew Hardy",
+    time: "00:00:00",
+    comment: "3. Warn - Távozás"
+  },
+  {
+    username: "Kiss Peter",
+    time: "59:26:07",
+    comment: "Prémium I."
+  },
+  {
+    username: "Angster Jan",
+    time: "00:00:00",
+    comment: "Felmondás"
+  },
+  {
+    username: "Knight Nicole",
+    time: "12:39:46",
+    comment: "-"
+  },
+  {
+    username: "Itadori Yuuji",
+    time: "00:00:00",
+    comment: "2. Warn"
+  },
+  {
+    username: "Kiss Krisztofer",
+    time: "00:00:00",
+    comment: "Szabadság"
+  },
+  {
+    username: "Fikarc Nyi",
+    time: "-",
+    comment: "Regisztráció hiánya"
+  },
+  {
+    username: "Kocsis Balint",
+    time: "-",
+    comment: "Regisztráció hiánya"
+  }
+
+]
+return (
     <div className="archived-container">
 
       <table className="table">
@@ -722,6 +921,28 @@ const dutyData6 = [
         <tbody>
           {" "}
           {dutyData6.map((data, id) => {
+            return (
+              <tr key={id}>
+                <td> {data.username} </td>
+                <td className="time">{data.time}</td>
+                <td className="time">{data.comment}</td>
+              </tr>
+            );
+          })}{" "}
+        </tbody>
+        </table>
+        <table className="table">
+        <thead>
+            <th colspan="3">7. Ciklus - 06.26-07.11</th>
+          <tr>
+            <th>N&eacute;v</th>
+            <th>Idő</th>
+            <th>Megjegyzés</th>
+          </tr>
+        </thead>
+        <tbody>
+          {" "}
+          {dutyData7.map((data, id) => {
             return (
               <tr key={id}>
                 <td> {data.username} </td>
