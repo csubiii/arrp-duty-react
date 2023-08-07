@@ -837,6 +837,176 @@ const dutyData7 = [
   }
 
 ]
+
+const dutyData8 = [
+  {
+    username: "Latorre Santiago",
+    time: "00:31:54",
+    comment: "Ciklusbelépő"
+  },
+  {
+    username: "Della Rocco",
+    time: "29:56:19",
+    comment: "-"
+  },
+  {
+    username: "Floyd Armando",
+    time: "17:20:48",
+    comment: "-"
+  },
+  {
+    username: "Lakatos Zolika",
+    time: "00:00:00",
+    comment: "3. Warn - Távozás"
+  },
+  {
+    username: "Ludas Matyi",
+    time: "22:40:40",
+    comment: "-"
+  },
+  {
+    username: "Olajos Feri",
+    time: "03:14:40",
+    comment: "Felmondás"
+  },
+  {
+    username: "II Puzser Abraham",
+    time: "05:10:03",
+    comment: "Felmondás"
+  },
+  {
+    username: "Kemal Teglas",
+    time: "42:18:13",
+    comment: "Prémium V."
+  },
+  {
+    username: "Kiss Zsigmond",
+    time: "48:18:46",
+    comment: "Prémium IV."
+  },
+  {
+    username: "Rocky Rambo",
+    time: "01:06:05",
+    comment: "Szabadság"
+  },  
+  {
+    username: "Noah Hill",
+    time: "11:32:54",
+    comment: "-"
+  },
+  {
+    username: "Nap Pali",
+    time: "00:00:00",
+    comment: "Szabadság"
+  },
+  {
+    username: "Wernher Von Braun",
+    time: "43:15:55",
+    comment: "Kirúgás"
+  },
+  {
+    username: "Weimer Christian",
+    time: "03:43:52",
+    comment: "1. Warn"
+  },
+  {
+    username: "Nagy Norman",
+    time: "00:25:59",
+    comment: "Felmondás"
+  },
+  {
+    username: "James Willson",
+    time: "07:52:25",
+    comment: "Szabadság"
+  },
+  {
+    username: "Nagy Istvan",
+    time: "05:46:37",
+    comment: "Szabadság"
+  },
+  {
+    username: "Conor Gibson",
+    time: "00:00:00",
+    comment: "Felmondás"
+  },
+  {
+    username: "Nico Ferdmann",
+    time: "35:13:50",
+    comment: "-"
+  },
+  {
+    username: "Thomas Orosz",
+    time: "00:00:00",
+    comment: "3. Warn - Távozás"
+  },
+  {
+    username: "Redd Jacob",
+    time: "61:21:55",
+    comment: "Prémium II."
+  },
+  {
+    username: "Scott Ferdmann",
+    time: "36:00:35",
+    comment: "-"
+  },
+  {
+    username: "Steve Jenkins",
+    time: "15:46:59",
+    comment: "-"
+  },
+  {
+    username: "Tanacs Krisztian",
+    time: "04:43:23",
+    comment: "Szabadság"
+  },
+  {
+    username: "Mano Maki",
+    time: "17:11:30",
+    comment: "-"
+  },
+  {
+    username: "Burke Noel",
+    time: "11:37:08",
+    comment: "-"
+  },
+  {
+    username: "Kiss Marco",
+    time: "58:51:00",
+    comment: "Prémium III."
+  },
+  {
+    username: "Nyikolaj Andrej",
+    time: "12:30:21",
+    comment: "-"
+  },
+  {
+    username: "Kiss Peter",
+    time: "72:28:29",
+    comment: "Prémium I."
+  },
+  {
+    username: "Knight Nicole",
+    time: "06:31:19",
+    comment: "1. Warn"
+  },
+  {
+    username: "Itadori Yuuji",
+    time: "00:00:00",
+    comment: "Felmondás"
+  },
+  {
+    username: "Beverneki Tamás",
+    time: "16:52:37",
+    comment: "-"
+  },
+  {
+    username: "Kiss Krisztofer",
+    time: "15:06:11",
+    comment: "-"
+  }
+
+]
+
 return (
     <div className="archived-container">
 
@@ -931,7 +1101,8 @@ return (
           })}{" "}
         </tbody>
         </table>
-        <table className="table">
+
+      <table className="table">
         <thead>
             <th colspan="3">7. Ciklus - 06.26-07.11</th>
           <tr>
@@ -943,6 +1114,29 @@ return (
         <tbody>
           {" "}
           {dutyData7.map((data, id) => {
+            return (
+              <tr key={id}>
+                <td> {data.username} </td>
+                <td className="time">{data.time}</td>
+                <td className="time">{data.comment}</td>
+              </tr>
+            );
+          })}{" "}
+        </tbody>
+        </table>
+
+        <table className="table">
+        <thead>
+            <th colspan="3">8. Ciklus - 07.11-07.23</th>
+          <tr>
+            <th>N&eacute;v</th>
+            <th>Idő</th>
+            <th>Megjegyzés</th>
+          </tr>
+        </thead>
+        <tbody>
+          {" "}
+          {dutyData8.map((data, id) => {
             return (
               <tr key={id}>
                 <td> {data.username} </td>
