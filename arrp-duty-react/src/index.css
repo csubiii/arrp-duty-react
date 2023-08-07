@@ -392,10 +392,52 @@ table.table thead th:first-child {
 
 }
 
-@media screen and (max-width: 1415px) {
- 
+/* For larger screens */
+@media screen and (min-width: 951px) {
   .archived-container {
-    display: block;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Display three columns on larger screens */
+    gap: 20px;
+    justify-items: center;
   }
 
+  .archived-date {
+    width: auto;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  table.table {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  table.table td,
+  table.table th {
+    padding: 8px;
+  }
+}
+
+/* For smaller screens */
+@media screen and (max-width: 950px) {
+  .archived-container {
+    display: block; /* Display as a block on smaller screens */
+    text-align: center; /* Center items horizontally */
+  }
+
+  .archived-date {
+    width: auto;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  table.table {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  table.table td,
+  table.table th {
+    padding: 8px;
+  }
 }
