@@ -1007,6 +1007,230 @@ const dutyData8 = [
 
 ]
 
+const dutyData9 = [
+  {
+    username: "Latorre Santiago",
+    time: "07:32:20",
+    comment: "Szabadság"
+  },
+  {
+    username: "Della Rocco",
+    time: "49:18:26",
+    comment: "Prémium I."
+  },
+  {
+    username: "Oszwald Edmund",
+    time: "04:26:03",
+    comment: "Ciklusbelépő"
+  },
+  {
+    username: "Floyd Armando",
+    time: "12:44:19",
+    comment: "Kirúgás"
+  },
+  {
+    username: "Randa Noel",
+    time: "04:32:34",
+    comment: "Ciklusbelépő"
+  },
+  {
+    username: "Ludas Matyi",
+    time: "30:46:33",
+    comment: "Felmondás"
+  },
+  {
+    username: "Antony Jackson",
+    time: "05:10:02",
+    comment: "Ciklusbelépő"
+  },
+  {
+    username: "Kemal Teglas",
+    time: "36:24:18",
+    comment: "Prémium II."
+  },
+  {
+    username: "Kiss Zsigmond",
+    time: "49:58:29",
+    comment: "Felmondás"
+  },
+  {
+    username: "Quandale Dinglebingle",
+    time: "31:13:29",
+    comment: "Prémium III."
+  },
+  {
+    username: "Johnson Jack",
+    time: "21:53:04",
+    comment: "-"
+  },
+  {
+    username: "Rocky Rambo",
+    time: "01:08:09",
+    comment: "3. Warn - Kirúgás"
+  },
+  {
+    username: "Gulyas Matyas",
+    time: "01:45:46",
+    comment: "Ciklusbelépő"
+  },
+  {
+    username: "Noah Hill",
+    time: "00:00:00",
+    comment: "2. Warn"
+  },
+  {
+    username: "Nap Pali",
+    time: "00:00:00",
+    comment: "Felmondás"
+  },
+  {
+    username: "Kovacs Laszlo",
+    time: "02:17:52",
+    comment: "Ciklusbelépő"
+  },
+  {
+    username: "Kennedy John",
+    time: "08:40:01",
+    comment: "Ciklusbelépő"
+  },
+  {
+    username: "Weimer Christian",
+    time: "00:00:00",
+    comment: "2. Warn"
+  },
+  {
+    username: "James Willson",
+    time: "12:38:02",
+    comment: "-"
+  },
+  {
+    username: "Nagy Istvan",
+    time: "00:00:00",
+    comment: "Szabadság"
+  },
+  {
+    username: "Nico Ferdmann",
+    time: "05:45:36",
+    comment: "Szabadság"
+  },
+  {
+    username: "Victor Shelby",
+    time: "00:00:00",
+    comment: "Ciklusbelépő"
+  },
+  {
+    username: "Williams Clark",
+    time: "00:00:00",
+    comment: "Ciklusbelépő"
+  },
+  {
+    username: "Oszwald Zoltán",
+    time: "03:01:20",
+    comment: "Ciklusbelépő"
+  },
+  {
+    username: "Redd Jacob",
+    time: "15:19:09",
+    comment: "Vezérkarba került"
+  },
+  {
+    username: "Scott Ferdmann",
+    time: "05:05:36",
+    comment: "Szabadság"
+  },
+  {
+    username: "Steve Jenkins",
+    time: "21:14:21",
+    comment: "-"
+  },
+  {
+    username: "Hector Fernández",
+    time: "04:40:39",
+    comment: "Ciklusbelépő"
+  },
+  {
+    username: "Tanacs Krisztan",
+    time: "00:00:00",
+    comment: "Felmondás"
+  },
+  {
+    username: "Mano Maki",
+    time: "11:57:48",
+    comment: "Felmondás"
+  },
+  {
+    username: "Burke Noel",
+    time: "00:00:00",
+    comment: "Felmondás"
+  },
+  {
+    username: "Carlo Smith",
+    time: "29:09:49",
+    comment: "Prémium IV."
+  },
+  {
+    username: "Kiss Marco",
+    time: "50:07:10",
+    comment: "Felmondás"
+  },
+  {
+    username: "Tike Myson",
+    time: "00:00:00",
+    comment: "Ciklusbelépő"
+  },
+  {
+    username: "Aryan Abdallah",
+    time: "14:27:40",
+    comment: "-"
+  },
+  {
+    username: "Richard Wilson",
+    time: "22:20:11",
+    comment: "Prémium V."
+  },
+  {
+    username: "Nyikolaj Andrej",
+    time: "58:38:39",
+    comment: "Felmondás"
+  },
+  {
+    username: "Kovács Alexander",
+    time: "15:27:40",
+    comment: "-"
+  },
+  {
+    username: "Kiss Peter",
+    time: "23:56:37",
+    comment: "Vezérkarba került"
+  },
+  {
+    username: "Knight Nicole",
+    time: "13:44:57",
+    comment: "-"
+  },
+  {
+    username: "Beverneki Tamás",
+    time: "41:08:24",
+    comment: "Felmondás"
+  },
+  {
+    username: "Kiss Krisztofer",
+    time: "85:37:48",
+    comment: "Felmondás"
+  },
+  {
+    username: "Richard Ottoman",
+    time: "-",
+    comment: "Regisztráció hiánya"
+  },
+  {
+    username: "Bajszos Kálmán",
+    time: "-",
+    comment: "Regisztráció hiánya"
+  }
+
+]
+
 return (
     <div className="archived-container">
 
@@ -1137,6 +1361,29 @@ return (
         <tbody>
           {" "}
           {dutyData8.map((data, id) => {
+            return (
+              <tr key={id}>
+                <td> {data.username} </td>
+                <td className="time">{data.time}</td>
+                <td className="time">{data.comment}</td>
+              </tr>
+            );
+          })}{" "}
+        </tbody>
+        </table>
+
+        <table className="table">
+        <thead>
+            <th colspan="3">9. Ciklus - 07.23-08.07</th>
+          <tr>
+            <th>N&eacute;v</th>
+            <th>Idő</th>
+            <th>Megjegyzés</th>
+          </tr>
+        </thead>
+        <tbody>
+          {" "}
+          {dutyData9.map((data, id) => {
             return (
               <tr key={id}>
                 <td> {data.username} </td>
