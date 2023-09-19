@@ -345,6 +345,24 @@ const dutyData11 = [
   {username: "Knight Nicole",	time: "00:00:00", comment: "Felmondás"}
 ]
 
+const dutyData12 = [
+  {username: "Latorre Santiago",      time: "00:00:00",        comment: "Szabadság"},
+  {username: "Jack Noa",	            time: "15:40:09",        comment: "-"},
+  {username: "Matt Trucker",	        time: "15:26:47",        comment: "-"},
+  {username: "Wilhelm Kitty",	        time: "24:42:02",        comment: "Felmondás"},
+  {username: "Lucifer Morningstar",	  time: "00:42:49",        comment: "Ciklusbelépő"},
+  {username: "Kovacs Laszlo",	        time: "00:00:00",        comment: "Kirúgás"},
+  {username: "Wyatt Anderson",        time: "66:44:29",        comment: "Prémium I."},
+  {username: "Smith Tyler",	          time: "01:42:51",        comment: "Felmondás"},
+  {username: "Kennedy John",	        time: "26:17:30",        comment: "Felmondás"},
+  {username: "Taylor Smith",	        time: "66:31:17",        comment: "Prémium II."},
+  {username: "James Willson",	        time: "12:42:02",        comment: "-"},
+  {username: "Randa Alex",            time: "00:00:00",        comment: "Kirúgás"},
+  {username: "Benedik Hawthorne",	    time: "06:02:00",        comment: "Szabadság"},
+  {username: "Aryan Abdallah",        time: "60:12:31",        comment: "Prémium III."},
+  {username: "Carlo Smith",           time: "60:01:21",        comment: "Prémium IV."},
+  {username: "Richard Wilson",	      time: "18:18:09",        comment: "-"}
+  ]
 return (
     <div className="archived-container">
 
@@ -544,6 +562,29 @@ return (
         <tbody>
           {" "}
           {dutyData11.map((data, id) => {
+            return (
+              <tr key={id}>
+                <td> {data.username} </td>
+                <td className="time">{data.time}</td>
+                <td className="time">{data.comment}</td>
+              </tr>
+            );
+          })}{" "}
+        </tbody>
+        </table>
+
+        <table className="table">
+        <thead>
+            <th colspan="3">12. Ciklus - 09.04-09.19</th>
+          <tr>
+            <th>N&eacute;v</th>
+            <th>Idő</th>
+            <th>Megjegyzés</th>
+          </tr>
+        </thead>
+        <tbody>
+          {" "}
+          {dutyData12.map((data, id) => {
             return (
               <tr key={id}>
                 <td> {data.username} </td>
