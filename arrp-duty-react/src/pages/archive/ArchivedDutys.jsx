@@ -363,6 +363,22 @@ const dutyData12 = [
   {username: "Carlo Smith",           time: "60:01:21",        comment: "Prémium IV."},
   {username: "Richard Wilson",	      time: "18:18:09",        comment: "-"}
   ]
+
+  const dutyData13 = [
+    {username: "Latorre Santiago",	        time:"00:00:00",        comment: "Szabadság"},
+    {username: "Jack Noa",	                time:"00:00:00",        comment: "Kirúgás"},
+    {username: "Matt Trucker",	            time:"56:22:01",        comment: "Prémium II."},
+    {username: "Lucifer Morningstar",	    time:"00:00:00",        comment: "1. Warn"},
+    {username: "Wyatt Anderson",	        time:"34:05:24",        comment: "-"   },
+    {username: "Taylor Smith",	            time:"26:44:51",        comment: "-"},
+    {username: "James Willson",	            time:"09:24:14",        comment: "Szabadság"},
+    {username: "Donne Kinga",	            time:"13:17:08",        comment: "-"},
+    {username: "Benedik Hawthorne",	        time:"00:01:00",        comment: "Kirúgás"},
+    {username: "Don Fillipo",	            time:"12:26:27",        comment: "-"},
+    {username: "Aryan Abdallah",	        time:"35:16:42",        comment: "Prémium III." },
+    {username: "Carlo Smith",	            time:"58:55:24",        comment: "Prémium I."},
+    {username: "Richard Wilson",	        time:"10:16:59",        comment: "-" }
+    ]
 return (
     <div className="archived-container">
 
@@ -585,6 +601,29 @@ return (
         <tbody>
           {" "}
           {dutyData12.map((data, id) => {
+            return (
+              <tr key={id}>
+                <td> {data.username} </td>
+                <td className="time">{data.time}</td>
+                <td className="time">{data.comment}</td>
+              </tr>
+            );
+          })}{" "}
+        </tbody>
+        </table>
+
+        <table className="table">
+        <thead>
+            <th colspan="3">13. Ciklus - 09.19-10.02</th>
+          <tr>
+            <th>N&eacute;v</th>
+            <th>Idő</th>
+            <th>Megjegyzés</th>
+          </tr>
+        </thead>
+        <tbody>
+          {" "}
+          {dutyData13.map((data, id) => {
             return (
               <tr key={id}>
                 <td> {data.username} </td>
