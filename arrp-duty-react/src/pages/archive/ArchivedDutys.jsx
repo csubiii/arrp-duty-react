@@ -379,6 +379,34 @@ const dutyData12 = [
     {username: "Carlo Smith",	            time:"58:55:24",        comment: "Prémium I."},
     {username: "Richard Wilson",	        time:"10:16:59",        comment: "-" }
     ]
+
+    const dutyData14 = [
+      {username: "Latorre Santiago",      time: "00:00:00",        comment: "Szabadság"}, 
+      {username: "Redd Jack",             time: "62:29:31",        comment: "Prémium I."},
+      {username: "Miller Lilien",         time: "06:51:07",        comment: "Ciklusbelépő"},
+      {username: "Matt Trucker",          time: "24:03:24",        comment: "Felmondás"},
+      {username: "Michael Dönci",         time: "17:48:21",        comment: "-"},
+      {username: "Lucifer Morningstar",   time: "00:00:00",        comment: "2. Warn"},
+      {username: "Wyatt Anderson",        time: "08:12:49",        comment: "Felmondás"}, 
+      {username: "Taylor Smith",          time: "10:17:21",        comment: "-"},
+      {username: "James Willson",         time: "06:19:33",        comment: "Felmondás"},
+      {username: "Harry Maguire",         time: "08:02:11",        comment: "Ciklusbelépő"},
+      {username: "Luigi DiTutti",         time: "01:16:29",        comment: "Ciklusbelépő"},
+      {username: "Donne Kinga",           time: "11:55:30",        comment: "-"},
+      {username: "Key Abby",              time: "14:23:44",        comment: "-"},
+      {username: "Don Fillipo",           time: "13:13:54",        comment: "-"},
+      {username: "Tupac Shakur",          time: "43:14:03",        comment: "Prémium II."},
+      {username: "Carlo Smith",           time: "26:53:11",        comment: "-"},
+      {username: "Matheo Beni",           time: "30:10:30",        comment: "-"},
+      {username: "Rage Karter",           time: "34:22:19",        comment: "Prémium III."},
+      {username: "Richard Wilson",        time: "00:00:00",        comment: "1. Warn"},
+      {username: "Joe Hudson",            time: "-",               comment: "Regisztráció hiánya"},
+      {username: "Noah Diego",            time: "-",               comment: "Regisztráció hiánya"},
+      {username: "Lewis Dave",            time: "-",               comment: "Regisztráció hiánya"},
+      {username: "Weston Jamie",          time: "-",               comment: "Regisztráció hiánya"},
+      {username: "Human Lajos",           time: "-",               comment: "Regisztráció hiánya"}
+      ]
+      
 return (
     <div className="archived-container">
 
@@ -624,6 +652,29 @@ return (
         <tbody>
           {" "}
           {dutyData13.map((data, id) => {
+            return (
+              <tr key={id}>
+                <td> {data.username} </td>
+                <td className="time">{data.time}</td>
+                <td className="time">{data.comment}</td>
+              </tr>
+            );
+          })}{" "}
+        </tbody>
+        </table>
+
+        <table className="table">
+        <thead>
+            <th colspan="3">14. Ciklus - 09.02-10.16</th>
+          <tr>
+            <th>N&eacute;v</th>
+            <th>Idő</th>
+            <th>Megjegyzés</th>
+          </tr>
+        </thead>
+        <tbody>
+          {" "}
+          {dutyData14.map((data, id) => {
             return (
               <tr key={id}>
                 <td> {data.username} </td>
