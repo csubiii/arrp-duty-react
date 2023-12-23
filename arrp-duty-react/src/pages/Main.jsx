@@ -7,12 +7,12 @@ import Duty from './duty/Duty';
 
 const Main = () => {
 
-  const [ isHidden, setIsHidden ] = useState(false)
+  const [ isHidden, setIsHidden ] = useState(true)
   const [user] = useAuthState(auth);
 
   return (
     <>    
-    { isHidden && <h1 className='maintenance-text'>Karbantartás alatt</h1> }
+    { isHidden && <h1 className='maintenance-text'>A rendszer Január 1-ig nem elérhető!</h1> }
     <div hidden={isHidden}>
     { user ? <Duty /> : <SignUpLogIn /> }
     </div>
