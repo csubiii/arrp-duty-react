@@ -63,7 +63,7 @@ const Duty = () => {
       {serviceDataList.map((list) => {
         return (
           <>
-            <h1 className="welcome">Üdv! {list.username}</h1>
+            <h1 className="welcome">Üdvözöllek {list.username}!</h1>
           <div className="duty-container" key={list.id}>
             <div className="duty-items">
               <p className="duty-time">Szolgálatban töltött idő: {Math.floor(count % (3600*24) / 3600)} óra {Math.floor(count % 3600 / 60)} perc {Math.floor(count % 60)} mp</p>

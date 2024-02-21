@@ -514,13 +514,150 @@ const dutyData15 = [
   {username: "Gordon Krisztian",	        time: "02:00:46",            comment: "1. Warn"},
   {username: "Joseph Hawke",              time: "-",                   comment: "Regisztráció hiánya"}
   ]
+  const dutyData19 = [
+    {username: "Agim Hoxha",	        time: "00:00:00",        comment: "Ciklusbelépő"},
+    {username: "Sepsiszent György",	  time: "08:01:16",        comment: "Felmondás"},
+    {username: "Danrous Draven",	    time: "07:43:19",        comment: "-"},
+    {username: "Aiden JAckson",	      time: "12:52:47",        comment: "-"},
+    {username: "John Davis",	        time: "01:15:12",        comment: "-"},
+    {username: "Zsoltár Fjurka",	    time: "00:00:00",        comment: "-"},
+    {username: "Rage Karter",	        time: "00:00:00",        comment: "-"},
+    {username: "Kyle Adam",	          time: "09:44:03",        comment: "-"},
+    {username: "Brooks Trevon",	      time: "02:46:14",        comment: "-"},
+    {username: "Thomas Wick",	        time: "00:28:29",        comment: "Felmondás"},
+    {username: "Meti Chever",	        time: "00:00:00",        comment: "-"},
+    {username: "Nagy Rebecca",	      time: "10:32:14",        comment: "-"},
+    {username: "Jack Hunter",	        time: "13:13:32",        comment: "-"},
+    {username: "Johnson Murphy",	    time: "08:39:20",        comment: "-"},
+    {username: "Jack Miller",	        time: "26:05:29",        comment: "-"},
+    {username: "Isaac_Foster",	      time: "34:18:11",        comment: "-"},
+    {username: "Donne Kinga",	        time: "15:51:50",        comment: "-"},   
+    {username: "Benjamin Kyle",	      time: "10:24:20",        comment: "-"},
+    {username: "Alessandro Damiano",	time: "17:53:26",        comment: "-"},   
+    {username: "Balogh Tetris",	      time: "05:02:57",        comment: "Felmondás"},
+    {username: "Tupac Shakur",	      time: "67:00:24",        comment: "Felmondás"},
+    {username: "John Toretto",	      time: "09:10:17",        comment: "-"},
+    {username: "Matheo Beni",	        time: "64:38:52",        comment: "Felmondás"},
+    {username: "Salvatore Stefan",	  time: "12:01:11",        comment: "-"},
+    {username: "Della Rocco",	        time: "36:16:11",        comment: "-"},
+    {username: "Gordon Krisztian",	  time: "00:00:00",        comment: "-"}
+    ]
+    
+    const dutyData20 = [
+    {username: "Agim Hoxha",	        time: "00:00:00",         comment: "1. Warn"},
+    {username: "Gize Gabor",	        time: "05:00:37",         comment: "Ciklusbelépő"},
+    {username: "John Walker",	        time: "03:13:20",         comment: "Ciklusbelépő"},
+    {username: "Danrous Draven",	    time: "00:00:00",         comment: "1. Warn"},
+    {username: "Aiden JAckson",	      time: "00:00:00",         comment: "Felmondás"},
+    {username: "John Reed",	          time: "43:37:33",         comment: "Prémium I."},
+    {username: "Lakatos Judas",	      time: "02:22:37",         comment: "Ciklusbelépő"},
+    {username: "Nagy Dani",	          time: "04:18:26",         comment: "Ciklusbelépő"},
+    {username: "John Davis",	        time: "05:56:51",         comment: "Felmondás"},
+    {username: "Zsoltár Fjurka",	    time: "00:00:00",         comment: "Felmondás"},
+    {username: "Kyle Adam",	          time: "00:00:00",         comment: "1. Warn"},
+    {username: "Brooks Trevon",	      time: "00:00:00",         comment: "1. Warn"},
+    {username: "Meti Chever",	        time: "00:00:00",         comment: "1. Warn"},
+    {username: "Nagy Rebecca",	      time: "14:23:57",         comment: "-"},
+    {username: "Jack Hunter",	        time: "03:22:38",         comment: "Felmondás"},
+    {username: "Johnson Murphy",	    time: "00:00:00",         comment: "1. Warn"},
+    {username: "Samuel Imre",	        time: "06:06:14",         comment: "Ciklusbelépő"},
+    {username: "Jack Miller",         time: "00:00:00",         comment: "Felmondás"},
+    {username: "Isaac_Foster",	      time: "02:58:00",         comment: "Felmondás"},
+    {username: "Donne Kinga",	        time: "08:20:39",         comment: "1. Warn"},
+    {username: "Benjamin Kyle",	      time: "00:00:00",         comment: "1. Warn"},
+    {username: "Alessandro Damiano",	time: "00:00:00",         comment: "1. Warn"},
+    {username: "John Toretto",	      time: "03:01:31",         comment: "Szabadság"},
+    {username: "Salvatore Stefan",	  time: "00:00:00",         comment: "1. Warn"},
+    {username: "Della Rocco",	        time: "60:30:04",         comment: "Vezérkarba került"},
+    {username: "Ferdmann Nico",       time: "-",                comment: "Regisztráció hiánya"},
+    {username: "Ferdmann Scott",      time: "-",                comment: "Regisztráció hiánya"},
+    {username: "Jhonathan Smith",     time: "-",                comment: "Regisztráció hiánya"},
+    {username: "Joseph Hawke",        time: "-",                comment: "Regisztráció hiánya"}
+    ]
+    const dutyData21 = [
+    {username: "Gize Gabor",	            time: "28:38:24",        comment: "Prémium VI."},
+    {username: "Lopos Koro",	            time: "18:07:55",        comment: "-"},
+    {username: "Smith Tyler",	            time: "30:05:08",        comment: "Prémium V."},
+    {username: "John Reed",	              time: "98:12:09",        comment: "Prémium I."},
+    {username: "Lakatos Bajnok",	        time: "49:38:19",        comment: "Prémium II."},
+    {username: "William David",	          time: "43:12:30",        comment: "Prémium III."},
+    {username: "Mekk Elek",	              time: "36:46:19",        comment: "Prémium IV."},
+    {username: "Nagy Dani",	              time: "13:40:16",        comment: "-"},
+    {username: "Biro Bertalan",	          time: "10:19:07",        comment: "-"},
+    {username: "Kyle Adam",	              time: "00:00:00",        comment: "2. Warn"},
+    {username: "Nagy Rebecca",	          time: "12:46:48",        comment: "-"},
+    {username: "Samuel Imre",	            time: "13:08:23",        comment: "-"},
+    {username: "Herceg Robi",	            time: "13:07:07",        comment: "-"},
+    {username: "Alessandro Damiano",	    time: "00:00:00",        comment: "2. Warn"},
+    {username: "Lakatos Hulio",	          time: "04:49:42",        comment: "Ciklusbelépő"},
+    {username: "Lopos Rikardo",           time: "01:20:24",        comment: "Ciklusbelépő"},
+    {username: "John Walker",	            time: "02:13:33",        comment: "Szabadság"},
+    {username: "Istenes Bertalan",	      time: "02:39:07",        comment: "Szabadság /határeset/"},
+    {username: "Lakatos Judas",	          time: "00:00:00",        comment: "Szabadság"},
+    {username: "Donne Kinga",	            time: "00:39:44",        comment: "Szabadság"},
+    {username: "Gordon Krisztian",	      time: "00:00:00",        comment: "-"},
+    {username: "Jhonathan Smith",	        time: "00:00:00",        comment: "Szabadság"},
+    {username: "John Toretto",	          time: "05:56:23",        comment: "Szabadság"},
+    {username: "Dexter William Stolas",	  time: "06:53:03",        comment: "Szabadság"},
+    {username: "Salvatore Stefan",	      time: "00:00:00",        comment: "Felmondás"},
+    {username: "Brooks Trevon",	          time: "00:00:00",        comment: "Felmondás"}, 
+    {username: "Lakatos Luige",	          time: "22:19:05",        comment: "Felmondás"}, 
+    {username: "Joseph Hawke",	          time: "00:00:00",        comment: "Felmondás"}, 
+    {username: "Meti Chever",	            time: "00:00:00",        comment: "Felmondás"}, 
+    {username: "Magzatus Deletus",	      time: "19:34:02",        comment: "Felmondás"}, 
+    {username: "Benjamin Kyle",	          time: "00:00:00",        comment: "Felmondás"}, 
+    {username: "Thomas Wick",	            time: "03:01:21",        comment: "Felmondás"}, 
+    {username: "Johnson Murphy",	        time: "00:00:00",        comment: "Felmondás"}, 
+    {username: "Agim Hoxha",	            time: "00:00:00",        comment: "Felmondás"},
+    {username: "Lakatos Robert",	        time: "27:55:10",        comment: "Felmondás"}, 
+    {username: "Danrous Draven",	        time: "00:00:00",        comment: "Felmondás"}, 
+    {username: "Ferdmann Scott",          time: "-",               comment: "Kirúgás"}
+    ]
+    const dutyData22 = [
+    {username: "Kolompar Vinetu",	        time: "01:44:09",        comment: "Ciklusbelépő"}, 
+    {username: "John Michael",	          time: "00:00:00",        comment: "Ciklusbelépő"}, 
+    {username: "Jakob Zoli",	            time: "03:02:08",        comment: "Ciklusbelépő"}, 
+    {username: "Nagy Peti",	              time: "02:38:00",        comment: "Ciklusbelépő"}, 
+    {username: "Gerald Sean",	            time: "00:03:31",        comment: "Ciklusbelépő"}, 
+    {username: "Szalai Péter",	          time: "00:23:25",        comment: "Ciklusbelépő"}, 
+    {username: "Ronan Lynch",	            time: "01:48:45",        comment: "Ciklusbelépő"}, 
+    {username: "Jondo Kecsk",	            time: "04:37:32",        comment: "Ciklusbelépő"}, 
+    {username: "Tökös Richy",	            time: "04:01:02",        comment: "Ciklusbelépő"}, 
+    {username: "Donne Kinga",	            time: "04:16:58",        comment: "Szabadság"}, 
+    {username: "John Reed",	              time: "86:03:57",        comment: "Vezérkarba került"}, 
+    {username: "Lakatos Bajnok",	        time: "94:56:41",        comment: "Prémium I."}, 
+    {username: "William David",	          time: "62:40:33",        comment: "Prémium II."}, 
+    {username: "Lopos Koro",	            time: "37:04:04",        comment: "Prémium III."}, 
+    {username: "Herceg Robi",	            time: "34:04:02",        comment: "Prémium IV."}, 
+    {username: "Mekk Elek",	              time: "30:38:34",        comment: "Prémium V."}, 
+    {username: "Lakatos Hulio",	          time: "18:56:48",        comment: "-"}, 
+    {username: "John Toretto",	          time: "10:10:57",        comment: "-"}, 
+    {username: "Nagy Rebecca",	          time: "13:13:33",        comment: "-"}, 
+    {username: "Daniel James",	          time: "19:11:15",        comment: "-"}, 
+    {username: "Fazekas Beszidll",	      time: "43:37:47",        comment: "Felmondás"},  
+    {username: "Gize Gabor",	            time: "00:00:00",        comment: "Felmondás"}, 
+    {username: "Gordon Krisztian",	      time: "00:00:00",        comment: "Felmondás"},  
+    {username: "John Walker",	            time: "00:00:00",        comment: "Felmondás"},  
+    {username: "Istenes Bertalan",	      time: "00:00:00",        comment: "Felmondás"}, 
+    {username: "Nagy Dani",	              time: "00:00:00",        comment: "Felmondás"},  
+    {username: "Joseph Hawke",	          time: "00:00:00",        comment: "Felmondás"},  
+    {username: "Jhonathan Smith",	        time: "00:00:00",        comment: "1. Warn"}, 
+    {username: "Samuel Imre",	            time: "00:29:56",        comment: "1. Warn"}, 
+    {username: "Lopos Rikardo",	          time: "00:00:00",        comment: "1. Warn"}, 
+    {username: "Biro Bertalan",	          time: "00:00:00",        comment: "1. Warn"}, 
+    {username: "Lakatos Judas",	          time: "00:00:00",        comment: "1. Warn"}, 
+    {username: "Dexter William Stolas",	  time: "00:47:49",        comment: "1. Warn"}, 
+    {username: "Smith Tyler",	            time: "00:00:00",        comment: "1. Warn"}, 
+    {username: "Kyle Adam",	              time: "00:00:00",        comment: "Kirúgás - 3. Warn"},  
+    {username: "Alessandro Damiano",	    time: "00:00:00",        comment: "Kirúgás - 3. Warn"} 
+    ]
 
 return (
     <div className="archived-container">
 
       <table className="table">
         <thead>
-            <th colspan="3">3. Ciklus - 05.01-05.15</th>
+            <th colspan="3">3. Ciklus - 2023.05.01-05.15</th>
           <tr>
             <th>N&eacute;v</th>
             <th>Idő</th>
@@ -543,7 +680,7 @@ return (
 
       <table className="table">
         <thead>
-            <th colspan="3">4. Ciklus - 05.15-05.29</th>
+            <th colspan="3">4. Ciklus - 2023.05.15-05.29</th>
           <tr>
             <th>N&eacute;v</th>
             <th>Idő</th>
@@ -566,7 +703,7 @@ return (
 
       <table className="table">
         <thead>
-            <th colspan="3">5. Ciklus - 05.29-06.14</th>
+            <th colspan="3">5. Ciklus - 2023.05.29-06.14</th>
           <tr>
             <th>N&eacute;v</th>
             <th>Idő</th>
@@ -589,7 +726,7 @@ return (
 
         <table className="table">
         <thead>
-            <th colspan="3">6. Ciklus - 06.14-06.26</th>
+            <th colspan="3">6. Ciklus - 2023.06.14-06.26</th>
           <tr>
             <th>N&eacute;v</th>
             <th>Idő</th>
@@ -612,7 +749,7 @@ return (
 
       <table className="table">
         <thead>
-            <th colspan="3">7. Ciklus - 06.26-07.11</th>
+            <th colspan="3">7. Ciklus - 2023.06.26-07.11</th>
           <tr>
             <th>N&eacute;v</th>
             <th>Idő</th>
@@ -635,7 +772,7 @@ return (
 
         <table className="table">
         <thead>
-            <th colspan="3">8. Ciklus - 07.11-07.23</th>
+            <th colspan="3">8. Ciklus - 2023.07.11-07.23</th>
           <tr>
             <th>N&eacute;v</th>
             <th>Idő</th>
@@ -658,7 +795,7 @@ return (
 
         <table className="table">
         <thead>
-            <th colspan="3">9. Ciklus - 07.23-08.07</th>
+            <th colspan="3">9. Ciklus - 2023.07.23-08.07</th>
           <tr>
             <th>N&eacute;v</th>
             <th>Idő</th>
@@ -681,7 +818,7 @@ return (
 
         <table className="table">
         <thead>
-            <th colspan="3">10. Ciklus - 08.07-08.21</th>
+            <th colspan="3">10. Ciklus - 2023.08.07-08.21</th>
           <tr>
             <th>N&eacute;v</th>
             <th>Idő</th>
@@ -704,7 +841,7 @@ return (
 
         <table className="table">
         <thead>
-            <th colspan="3">11. Ciklus - 08.21-09.04</th>
+            <th colspan="3">11. Ciklus - 2023.08.21-09.04</th>
           <tr>
             <th>N&eacute;v</th>
             <th>Idő</th>
@@ -727,7 +864,7 @@ return (
 
         <table className="table">
         <thead>
-            <th colspan="3">12. Ciklus - 09.04-09.19</th>
+            <th colspan="3">12. Ciklus - 2023.09.04-09.19</th>
           <tr>
             <th>N&eacute;v</th>
             <th>Idő</th>
@@ -750,7 +887,7 @@ return (
 
         <table className="table">
         <thead>
-            <th colspan="3">13. Ciklus - 09.19-10.02</th>
+            <th colspan="3">13. Ciklus - 2023.09.19-10.02</th>
           <tr>
             <th>N&eacute;v</th>
             <th>Idő</th>
@@ -773,7 +910,7 @@ return (
 
         <table className="table">
         <thead>
-            <th colspan="3">14. Ciklus - 09.02-10.16</th>
+            <th colspan="3">14. Ciklus - 2023.09.02-10.16</th>
           <tr>
             <th>N&eacute;v</th>
             <th>Idő</th>
@@ -796,7 +933,7 @@ return (
 
         <table className="table">
         <thead>
-            <th colspan="3">15. Ciklus - 10.16-10.29</th>
+            <th colspan="3">15. Ciklus - 2023.10.16-10.29</th>
           <tr>
             <th>N&eacute;v</th>
             <th>Idő</th>
@@ -819,7 +956,7 @@ return (
 
         <table className="table">
         <thead>
-            <th colspan="3">16. Ciklus - 10.29-11.12</th>
+            <th colspan="3">16. Ciklus - 2023.10.29-11.12</th>
           <tr>
             <th>N&eacute;v</th>
             <th>Idő</th>
@@ -842,7 +979,7 @@ return (
 
         <table className="table">
         <thead>
-            <th colspan="3">17. Ciklus - 11.12-11.26</th>
+            <th colspan="3">17. Ciklus - 2023.11.12-11.26</th>
           <tr>
             <th>N&eacute;v</th>
             <th>Idő</th>
@@ -865,7 +1002,7 @@ return (
 
         <table className="table">
         <thead>
-            <th colspan="3">18. Ciklus - 11.26-12.11</th>
+            <th colspan="3">18. Ciklus - 2023.11.26-12.11</th>
           <tr>
             <th>N&eacute;v</th>
             <th>Idő</th>
@@ -885,7 +1022,103 @@ return (
           })}{" "}
         </tbody>
         </table>
+
+        <table className="table">
+        <thead>
+            <th colspan="3">19. Ciklus - 2023.12.11-2024.01.03</th>
+          <tr>
+            <th>N&eacute;v</th>
+            <th>Idő</th>
+            <th>Megjegyzés</th>
+          </tr>
+        </thead>
+        <tbody>
+          {" "}
+          {dutyData19.map((data, id) => {
+            return (
+              <tr key={id}>
+                <td> {data.username} </td>
+                <td className="time">{data.time}</td>
+                <td className="time">{data.comment}</td>
+              </tr>
+            );
+          })}{" "}
+        </tbody>
+        </table>
+
+        <table className="table">
+        <thead>
+            <th colspan="3">20. Ciklus - 2024.01.03-01.14</th>
+          <tr>
+            <th>N&eacute;v</th>
+            <th>Idő</th>
+            <th>Megjegyzés</th>
+          </tr>
+        </thead>
+        <tbody>
+          {" "}
+          {dutyData20.map((data, id) => {
+            return (
+              <tr key={id}>
+                <td> {data.username} </td>
+                <td className="time">{data.time}</td>
+                <td className="time">{data.comment}</td>
+              </tr>
+            );
+          })}{" "}
+        </tbody>
+        </table>
+
+        <table className="table">
+        <thead>
+            <th colspan="3">21. Ciklus - 2024.01.14-01.29</th>
+          <tr>
+            <th>N&eacute;v</th>
+            <th>Idő</th>
+            <th>Megjegyzés</th>
+          </tr>
+        </thead>
+        <tbody>
+          {" "}
+          {dutyData21.map((data, id) => {
+            return (
+              <tr key={id}>
+                <td> {data.username} </td>
+                <td className="time">{data.time}</td>
+                <td className="time">{data.comment}</td>
+              </tr>
+            );
+          })}{" "}
+        </tbody>
+        </table>
+
+        <table className="table">
+        <thead>
+            <th colspan="3">22. Ciklus - 2024.01.29-02.11</th>
+          <tr>
+            <th>N&eacute;v</th>
+            <th>Idő</th>
+            <th>Megjegyzés</th>
+          </tr>
+        </thead>
+        <tbody>
+          {" "}
+          {dutyData22.map((data, id) => {
+            return (
+              <tr key={id}>
+                <td> {data.username} </td>
+                <td className="time">{data.time}</td>
+                <td className="time">{data.comment}</td>
+              </tr>
+            );
+          })}{" "}
+        </tbody>
+        </table>
+
+        
     </div>
+
+    
   );
 };
 
