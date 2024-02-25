@@ -652,6 +652,44 @@ const dutyData15 = [
     {username: "Alessandro Damiano",	    time: "00:00:00",        comment: "Kirúgás - 3. Warn"} 
     ]
 
+    const dutyData23 = [
+      {username: "William David",	         time: "93:44:01",        comment: "Prémium I. /Megvonva/"},
+      {username: "Ronan Lynch",	           time: "73:38:11",        comment: "Prémium I."},
+      {username: "Mekk Elek",	             time: "52:54:23",        comment: "Prémium II."},
+      {username: "Nagy Peti",	             time: "49:56:32",        comment: "Prémium III."},
+      {username: "Kolompar Vinetu",	       time: "33:23:52",        comment: "Prémium IV."},
+      {username: "Tsing Steven",	         time: "30:56:12",        comment: "Prémium V."},
+      {username: "Herceg Robi",	           time: "30:13:19",        comment: "Prémium VI."},
+      {username: "John Karter",	           time: "23:41:49",        comment: "-"},
+      {username: "Lopos Koro",	           time: "22:37:00",        comment: "-"},
+      {username: "Smith Christian",	       time: "26:19:10",        comment: "-"},
+      {username: "Connor Gibbson",	       time: "07:40:48",        comment: "-"},
+      {username: "Beater Krisz",	         time: "23:54:42",        comment: "-"},
+      {username: "Nagy Rebecca",	         time: "13:06:48",        comment: "-"},
+      {username: "Lakatos Bajnok",	       time: "26:51:22",        comment: "-"},
+      {username: "Lakatos Hulio",	         time: "12:45:20",        comment: "-"},
+      {username: "Taylor David",	         time: "20:16:06",        comment: "-"},
+      {username: "Taylor Black",	         time: "00:00:00",        comment: "Ciklusbelépő"},
+      {username: "Donne Kinga",	           time: "00:00:00",        comment: "Szabadság"},
+      {username: "Jondo Kecsk",	           time: "00:41:43",        comment: "Szabadság"},
+      {username: "John Toretto",	         time: "01:31:34",        comment: "1. Warn"},
+      {username: "Tökös Richy",	           time: "00:00:00",        comment: "1. Warn"},
+      {username: "Samuel Imre",	           time: "00:00:00",        comment: "2. Warn"},
+      {username: "Jhonathan Smith",	       time: "00:00:00",        comment: "Inaktivitás - Kirúgás"},
+      {username: "Lakatos Judas",	         time: "00:00:00",        comment: "Inaktivitás - Kirúgás"},   
+      {username: "Biro Bertalan",	         time: "00:00:00",        comment: "Inaktivitás - Kirúgás"},   
+      {username: "Dexter William Stolas",	 time: "00:00:00",        comment: "Inaktivitás - Kirúgás"},   
+      {username: "Smith Tyler",	           time: "00:00:00",        comment: "Inaktivitás - Kirúgás"},   
+      {username: "Lopos Rikardo",	         time: "00:00:00",        comment: "Inaktivitás - Kirúgás"},   
+      {username: "Jakob Zoli",	           time: "05:06:16",        comment: "Kirúgás"}, 
+      {username: "Szalai Péter",	         time: "00:00:00",        comment: "Kirúgás"}, 
+      {username: "Elka Lapal",	           time: "27:49:42",        comment: "Felmondás"},       
+      {username: "John Michael",	         time: "05:39:59",        comment: "Felmondás"},       
+      {username: "Daniel James",	         time: "09:50:50",        comment: "Felmondás"},       
+      {username: "Temesi Ottó",	           time: "19:10:53",        comment: "Felmondás"}, 
+      {username: "Gerald Sean",	           time: "00:00:00",        comment: "Felmondás"}       
+      ]
+
 return (
     <div className="archived-container">
 
@@ -1104,6 +1142,29 @@ return (
         <tbody>
           {" "}
           {dutyData22.map((data, id) => {
+            return (
+              <tr key={id}>
+                <td> {data.username} </td>
+                <td className="time">{data.time}</td>
+                <td className="time">{data.comment}</td>
+              </tr>
+            );
+          })}{" "}
+        </tbody>
+        </table>
+
+        <table className="table">
+        <thead>
+            <th colspan="3">23. Ciklus - 2024.02.11-02.25</th>
+          <tr>
+            <th>N&eacute;v</th>
+            <th>Idő</th>
+            <th>Megjegyzés</th>
+          </tr>
+        </thead>
+        <tbody>
+          {" "}
+          {dutyData23.map((data, id) => {
             return (
               <tr key={id}>
                 <td> {data.username} </td>
