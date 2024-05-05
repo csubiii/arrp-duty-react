@@ -814,6 +814,27 @@ const dutyData15 = [
         {username: "Veres Feri",	        time: "00:00:00",        comment: "Felmondás"},               
         {username: "Roberto Phillips",	  time: "15:13:57",        comment: "Felmondás"}               
         ]
+        const dutyData28 = [
+          {username: "James Willson",	              time: "49:56:08",        comment: "Prémium I."},
+          {username: "Szabo Kristof",	              time: "13:59:53",        comment: "-"},
+          {username: "Ricardo D White",	            time: "15:18:03",        comment: "-"},
+          {username: "West Jacob",	                time: "05:25:05",        comment: "Szabadság"},
+          {username: "Lakatos Dzsino",	            time: "06:32:11",        comment: "Ciklusbelépő"},
+          {username: "James Ayden",	                time: "00:31:48",        comment: "Ciklusbelépő"},
+          {username: "Wick Martinez",	              time: "05:07:01",        comment: "Ciklusbelépő"},
+          {username: "Herceg Robi",	                time: "04:59:33",        comment: "Ciklusbelépő"},
+          {username: "Lakatos Leonidász",	          time: "04:15:15",        comment: "1. Warn"},
+          {username: "Kazinczy Martin",	            time: "09:29:56",        comment: "1. Warn"},
+          {username: "Nagy Lajos",	                time: "02:24:35",        comment: "1. Warn"},
+          {username: "Don Paco",	                  time: "00:00:00",        comment: "2. Warn"},
+          {username: "Alex White",	                time: "00:00:00",        comment: "2. Warn"},
+          {username: "Smith jhon",	                time: "00:00:00",        comment: "3. Warn - Kirúgás"},       
+          {username: "Verő Gyuri",	                time: "02:48:57",        comment: "Vezérkarba került"},       
+          {username: "Mekk Elek",	                  time: "00:00:00",        comment: "Vezérkarba került"},       
+          {username: "Nagy Peti",	                  time: "00:00:00",        comment: "Vezérkarba került"},       
+          {username: "Tompa Jackson",	              time: "06:42:46",        comment: "Felmondás"},               
+          {username: "Gravestone Eric",	            time: "02:02:57",        comment: "Felmondás"}               
+          ]
 
 
 return (
@@ -1383,6 +1404,29 @@ return (
         <tbody>
           {" "}
           {dutyData27.map((data, id) => {
+            return (
+              <tr key={id}>
+                <td> {data.username} </td>
+                <td className="time">{data.time}</td>
+                <td className="time">{data.comment}</td>
+              </tr>
+            );
+          })}{" "}
+        </tbody>
+        </table>
+
+        <table className="table">
+        <thead>
+            <th colspan="3">28. Ciklus - 2024.04.21-05.05</th>
+          <tr>
+            <th>N&eacute;v</th>
+            <th>Idő</th>
+            <th>Megjegyzés</th>
+          </tr>
+        </thead>
+        <tbody>
+          {" "}
+          {dutyData28.map((data, id) => {
             return (
               <tr key={id}>
                 <td> {data.username} </td>
