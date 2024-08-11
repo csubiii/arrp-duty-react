@@ -1054,7 +1054,7 @@ const ArchivedDutys = () => {
     {username: "Szabo Sandor",	          time: "35:32:09",        comment: "Prémium VI."},         
     {username: "Sins Jimmy",	            time: "22:44:48",        comment: "-"},                   
     {username: "Lakatos Kolompar",	      time: "12:20:51",        comment: "[Rossz-email (1. Warn + fióktörlés)]"},
-    {username: "Robert Armstrong",	      time: "13:46:29",        comment: "[Multiaccount(1. Warn + 1 törlés)]"},
+    {username: "Robert Armstrong",	      time: "13:46:29",        comment: "[Multiaccount (1. Warn + 1 törlés)]"},
     {username: "Farkas alex",	            time: "33:04:44",        comment: "[Elírás-email]"},
     {username: "Armand Raffael",	        time: "26:07:26",        comment: "-"},
     {username: "Seres Norbi",	            time: "25:33:03",        comment: "-"},                   
