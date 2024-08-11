@@ -898,6 +898,192 @@ const ArchivedDutys = () => {
     { username: "Bango Sanyi", time: "05:31:15", comment: "Kirúgás" },
     { username: "Mityko Pityesz", time: "04:59:19", comment: "Kirúgás" }
   ]
+  const dutyData31 = [
+    {username: "Richard Neumann",	             time: "85:28:26",        comment: "Prémium I."},
+    {username: "Deacon Woods",	               time: "82:55:14",        comment: "Prémium II."},
+    {username: "Lakatos Benjamin",	           time: "64:00:27",        comment: "Prémium III."},
+    {username: "Bradford Peter",	             time: "63:01:35",        comment: "Prémium IV."},
+    {username: "Verybig Peter",	               time: "37:31:28",        comment: "Prémium V."},
+    {username: "Emily Smith",                  time: "16:35:08",        comment: "-"},
+    {username: "Tsing Steven",	               time: "24:50:50",        comment: "-"},
+    {username: "Lakatos Mate",	               time: "14:21:23",        comment: "-"},
+    {username: "Jax Teller",	                 time: "32:58:14",        comment: "-"},
+    {username: "Farkas Alex",	                 time: "11:54:21",        comment: "-"},
+    {username: "Big Money",	                   time: "15:52:50",        comment: "-"},
+    {username: "Savas Robert",	               time: "13:47:57",        comment: "-"},
+    {username: "James Willson",	               time: "26:14:35",        comment: "-"},
+    {username: "Kazinczy martin",	             time: "32:42:36",        comment: "-"},
+    {username: "Sonka ocsi",	                 time: "34:51:28",        comment: "-"},
+    {username: "Phill Szalok",	               time: "18:49:36",        comment: "-"},
+    {username: "Emilio Santorini",	           time: "23:03:27",        comment: "-"},
+    {username: "Menziesh Menyus",	             time: "11:35:16",        comment: "-"},
+    {username: "Huan Carlos Huanmigel",	       time: "27:54:23",        comment: "-"},
+    {username: "West Jacob",	                 time: "15:09:27",        comment: "-"},
+    {username: "Asztalos Alex",	               time: "16:15:30",        comment: "-"},
+    {username: "Lakatos Leonidász",	           time: "06:05:50",        comment: "Szabadság"},
+    {username: "Don Ludwig di Sicillia",	     time: "06:48:02",        comment: "Szabadság"},
+    {username: "Kiss Csaba",	                 time: "05:00:42",        comment: "Szabadság"},
+    {username: "Marco Toretto",	               time: "05:01:53",        comment: "Szabadság"},
+    {username: "Nemeth Zoltan",	               time: "00:00:00",        comment: "Ciklusbelépő"},
+    {username: "Robert Armstrong",	           time: "07:36:47",        comment: "Ciklusbelépő"},
+    {username: "Dr Taka",	                     time: "01:06:53",        comment: "Ciklusbelépő"},
+    {username: "Desseffy Anthony",	           time: "01:15:56",        comment: "Ciklusbelépő"},
+    {username: "Emberi Beila",	               time: "04:50:08",        comment: "Ciklusbelépő"},
+    {username: "Hambu Beni",	                 time: "03:14:12",        comment: "Ciklusbelépő"},
+    {username: "Zsadanyi Barnuska",	           time: "09:55:16",        comment: "Ciklusbelépő"},
+    {username: "Sebők Ármándó",                time: "03:19:51",        comment: "1. Warn"},
+    {username: "Wick Martinez",	               time: "00:00:00",        comment: "2. Warn"},
+    {username: "Lakatos Dzsino",	             time: "00:00:00",        comment: "Felmondás"},      
+    {username: "Temesi Ottó",	                 time: "29:11:32",        comment: "Felmondás"},      
+    {username: "olajos feri",	                 time: "22:05:21",        comment: "Felmondás"},      
+    {username: "Samuel Imre",	                 time: "00:00:00",        comment: "Felmondás"}      
+    ]
+    
+    const dutyData32 = [
+    {username: "Jack Paul",	                    time: "67:48:34",           comment: "Megvont Prémium"},
+    {username: "Deacon Woods",	                time: "59:18:16",           comment: "Prémium II."},
+    {username: "Miklo Pablo",	                  time: "58:33:57",           comment: "Prémium III."},
+    {username: "Verybig Peter",	                time: "47:35:12",           comment: "Prémium IV."},
+    {username: "Emily Smith",	                  time: "37:04:02",           comment: "-"},
+    {username: "Jax Teller",	                  time: "24:42:04",           comment: "-"},            
+    {username: "Stoyka Armand",	                time: "14:08:02",           comment: "-"},
+    {username: "Robert Armstrong",	            time: "25:10:34",           comment: "-"},
+    {username: "Richard Neumann",	              time: "32:48:40",           comment: "-"},
+    {username: "Savas Robert",	                time: "13:03:12",           comment: "-"},
+    {username: "Desseffy Anthony",	            time: "19:47:15",           comment: "-"},
+    {username: "Temesi Ottó",	                  time: "34:18:42",           comment: "-"},
+    {username: "Kiss Csaba",	                  time: "22:01:58",           comment: "-"},
+    {username: "Kerekes Simon",	                time: "14:26:08",           comment: "-"},
+    {username: "Asztalos Alex",	                time: "20:45:02",           comment: "-"},
+    {username: "Lakatos Benjamin",	            time: "25:18:05",           comment: "-"},
+    {username: "Lakatos Mate",	                time: "00:00:00",           comment: "1. Warn"},
+    {username: "Don Ludwig di Sicillia",	      time: "00:00:00",           comment: "2. Warn"},
+    {username: "Marco Toretto",	                time: "04:27:39",           comment: "2. Warn"},
+    {username: "Kory Cortez",                 	time: "06:56:55",           comment: "Ciklusbelépő"},
+    {username: "Monster Rehab",	                time: "03:25:54",           comment: "Ciklusbelépő"},
+    {username: "Sergio Marquina",	              time: "01:06:49",           comment: "Ciklusbelépő"},
+    {username: "Molotov Antonov",	              time: "02:55:55",           comment: "Ciklusbelépő"},
+    {username: "Phill Szalok",	                time: "00:00:00",           comment: "Szabadság"},
+    {username: "Huan Carlos Huanmigel",	        time: "00:00:00",           comment: "Szabadság"},
+    {username: "Lakatos Leonidász",	            time: "00:29:39",           comment: "Szabadság"},
+    {username: "Big Money",	                    time: "05:23:31",           comment: "Szabadság"},
+    {username: "Farkas Alex",	                  time: "41:07:18",           comment: "Felmondás"},
+    {username: "Zsadanyi Barnuska",	            time: "10:12:27",           comment: "Felmondás"},           
+    {username: "Hambu Beni",	                  time: "104:09:06",          comment: "Felmondás"},           
+    {username: "Emberi Beila",	                time: "02:39:27",           comment: "Felmondás"},           
+    {username: "Emilio Santorini",	            time: "05:28:34",           comment: "Felmondás"},           
+    {username: "Kolompár Zero",	                time: "06:24:33",           comment: "Felmondás"},           
+    {username: "Menziesh Menyus",	              time: "00:00:00",           comment: "Felmondás"},           
+    {username: "West Jacob",	                  time: "00:16:42",           comment: "Felmondás"},           
+    {username: "Sonka ocsi",	                  time: "06:42:23",           comment: "Felmondás"},           
+    {username: "Bradford Peter",	              time: "31:59:55",           comment: "Felmondás"},           
+    {username: "Kazinczy martin",	              time: "22:39:29",           comment: "Felmondás"},           
+    {username: "Dr Taka",	                      time: "04:32:09",           comment: "Felmondás"},           
+    {username: "James Willson",	                time: "06:06:33",           comment: "Felmondás"},           
+    {username: "Tsing Steven",	                time: "49:14:35",           comment: "Felmondás"},           
+    {username: "Sebők Ármándó",	                time: "00:00:00",           comment: "Felmondás"},           
+    {username: "Wick Martinez",	                time: "00:00:00",           comment: "Kirúgás"},             
+    {username: "Nemeth Zoltan",	                time: "00:00:00",           comment: "Inaktív - Kirúgás"}   
+    ]
+    
+    const dutyData33 = [
+    {username: "Stoyka Armand",	              time: "97:21:03",        comment: "Prémium I."},
+    {username: "Emily Smith",	                time: "60:42:27",        comment: "Prémium II."},
+    {username: "Robert Armstrong",	          time: "41:37:55",        comment: "Prémium III."},
+    {username: "Lakatos Kolompar",	          time: "10:00:00",        comment: "-"},
+    {username: "Brown Jack",	                time: "04:26:26",        comment: "Ciklusbelépő"},
+    {username: "Phill Szalok",	              time: "00:00:00",        comment: "Szabadság"},
+    {username: "Lakatos Benjamin",	          time: "00:00:01",        comment: "Szabadság"},
+    {username: "Huan Carlos Huanmigel",	      time: "00:00:00",        comment: "Szabadság"},
+    {username: "Desseffy Anthony",	          time: "03:29:13",        comment: "1. Warn"},
+    {username: "Asztalos Alex",	              time: "00:55:01",        comment: "2. Warn"},
+    {username: "Temesi Ottó",	                time: "40:47:58",        comment: "Vezérkarba került"},       
+    {username: "Richard Neumann",	            time: "101:06:26",       comment: "Vezérkarba került"},       
+    {username: "Lakatos Mate",	              time: "00:00:00",        comment: "Felmondás"},       
+    {username: "Jax Teller",	                time: "06:07:38",        comment: "Felmondás"},       
+    {username: "Monster Rehab",	              time: "00:00:00",        comment: "Felmondás"},       
+    {username: "Kiss Csaba",	                time: "02:43:19",        comment: "Felmondás"},       
+    {username: "Verybig Peter",	              time: "17:17:29",        comment: "Felmondás"},       
+    {username: "Negan Nease",	                time: "08:17:11",        comment: "Felmondás"},       
+    {username: "Kerekes Simon",	              time: "13:14:18",        comment: "Felmondás"},       
+    {username: "Molotov Antonov",	            time: "09:33:13",        comment: "Felmondás"},       
+    {username: "Don Ludwig di Sicillia",	    time: "00:00:00",        comment: "Felmondás"},       
+    {username: "Marco Toretto",	              time: "01:02:16",        comment: "Felmondás"},       
+    {username: "Big Money",	                  time: "00:00:00",        comment: "Felmondás"},       
+    {username: "Savas Robert",	              time: "11:42:43",        comment: "Felmondás"},       
+    {username: "Lakatos Leonidász",	          time: "13:08:58",        comment: "Felmondás"},       
+    {username: "Deacon Woods",	              time: "30:39:34",        comment: "Felmondás"},      
+    {username: "Sergio Marquina",	            time: "00:00:00",        comment: "Felmondás"},       
+    {username: "Kory Cortez",	                time: "00:00:00",        comment: "Felmondás"},       
+    {username: "Miklo Pablo",	                time: "73:37:45",        comment: "Felmondás"},       
+    {username: "Jack Paul",	                  time: "13:15:36",        comment: "Kirúgás - Feketelista"}       
+    ]
+    
+    const dutyData34 = [
+    {username: "Stoyka Armand",	          time: "108:34:55",       comment: "Prémium I."},
+    {username: "Robert Armstrong",	      time: "60:07:27",        comment: "Prémium II."},
+    {username: "Innye Pista",         	  time: "56:34:48",        comment: "Prémium III."},
+    {username: "olajos feri",	            time: "39:17:46",        comment: "Prémium IV."},
+    {username: "Szurke Laci",	            time: "15:51:35",        comment: "-"},
+    {username: "Farkas alex",	            time: "10:03:11",        comment: "-"},
+    {username: "Sebok Armando",	          time: "10:59:35",        comment: "-"},
+    {username: "Asztalos Alex",	          time: "10:00:30",        comment: "-"},
+    {username: "Lakatos Benjamin",	      time: "00:00:00",        comment: "1. Warn"},
+    {username: "Szabo Sandor",	          time: "00:00:00",        comment: "Ciklusbelépő"},
+    {username: "Fekete Klaudia",	        time: "04:51:26",        comment: "Ciklusbelépő"},
+    {username: "Lakatos Brendon",	        time: "00:00:00",        comment: "Ciklusbelépő"},
+    {username: "sebo pisti",	            time: "06:06:11",        comment: "Ciklusbelépő"},
+    {username: "Szabo Ádám",	            time: "00:00:00",        comment: "Ciklusbelépő"},
+    {username: "Seres Norbi",	            time: "00:40:41",        comment: "Ciklusbelépő"},
+    {username: "Szeverényi Attila",	      time: "02:31:54",        comment: "Ciklusbelépő"},
+    {username: "Huan Carlos Huanmigel",	  time: "00:00:00",        comment: "Szabadság"},
+    {username: "Lakatos Kolompar",	      time: "04:42:54",        comment: "Szabadság"},
+    {username: "Thomas Gonzalez",	        time: "68:13:12",        comment: "Felmondás"},       
+    {username: "Brown Jack",	            time: "00:00:00",        comment: "Felmondás"},       
+    {username: "Phill Szalok",	          time: "00:00:00",        comment: "Felmondás"},       
+    {username: "Desseffy Anthony",	      time: "00:00:00",        comment: "Felmondás"},       
+    {username: "Emily Smith",	            time: "45:23:59",        comment: "Felmondás"}       
+    ]
+    
+    const dutyData35 = [
+    {username: "Logan Cooper",	          time: "45:24:34",        comment: "Prémium I."},          
+    {username: "Lakatos Brendon",	        time: "40:50:40",        comment: "Prémium II."},        
+    {username: "Davis Matthew",	          time: "39:25:47",        comment: "Prémium III."},        
+    {username: "Szabo Ádám",	            time: "36:16:20",        comment: "Prémium IV."},         
+    {username: "Peter Bradford",	        time: "35:38:49",        comment: "Prémium V."},          
+    {username: "Szabo Sandor",	          time: "35:32:09",        comment: "Prémium VI."},         
+    {username: "Sins Jimmy",	            time: "22:44:48",        comment: "-"},                   
+    {username: "Lakatos Kolompar",	      time: "12:20:51",        comment: "-[Rossz-email (1. Warn + fióktörlés)]"},
+    {username: "Robert Armstrong",	      time: "13:46:29",        comment: "-[Multiaccount(1. Warn + 1 törlés)]"},
+    {username: "Farkas alex",	            time: "33:04:44",        comment: "-[Elírás-email /]"},
+    {username: "Armand Raffael",	        time: "26:07:26",        comment: "-[Taglista (1. Warn)]"},
+    {username: "Seres Norbi",	            time: "25:33:03",        comment: "-"},                   
+    {username: "Asztalos Alex",	          time: "13:28:25",        comment: "-[Elírás-email /]"},
+    {username: "Winston Matthew",         time: "19:09:00",        comment: "-[Elírás-név (Cyber Punk volt) /]"},
+    {username: "Carlo Santos",	          time: "00:32:59",        comment: "Ciklusbelépő"},        
+    {username: "Josh David",	            time: "06:13:11",        comment: "Ciklusbelépő"},       
+    {username: "Nagy Rajmund",	          time: "01:52:51",        comment: "Ciklusbelépő [Taglista /]"}, 
+    {username: "Ezequiel Woods",	        time: "07:17:25",        comment: "Ciklusbelépő"},        
+    {username: "Tarhonyas Gyurika",	      time: "01:30:32",        comment: "Ciklusbelépő"},        
+    {username: "Ryan Pierce",	            time: "00:00:00",        comment: "Ciklusbelépő"},        
+    {username: "Johnson Murphy",	        time: "05:57:07",        comment: "Ciklusbelépő"},        
+    {username: "Enzo Bianchi",	          time: "03:25:38",        comment: "Ciklusbelépő"},        
+    {username: "Kaydron Lawson",	        time: "00:00:00",        comment: "Ciklusbelépő"},        
+    {username: "April Park",	            time: "00:23:17",        comment: "Ciklusbelépő"},        
+    {username: "Noah West",	              time: "04:17:20",        comment: "Szabadság"},           
+    {username: "Jonatan Hadson",	        time: "08:09:12",        comment: "[Nincs adat (1. Warn)]"},
+    {username: "Raffael Riki",	          time: "00:55:53",        comment: "[Nincs adat (1. Warn)]"},
+    {username: "Szurke Laci",	            time: "08:25:22",        comment: "1. Warn"},             
+    {username: "Lakatos Benjamin",	      time: "00:00:00",        comment: "Inaktív - Kirúgás"},       
+    {username: "Huan Carlos Huanmigel",	  time: "00:28:52",        comment: "Inaktív - Kirúgás"},       
+    {username: "Innye Pista",	            time: "85:50:16",        comment: "Felmondás"},       
+    {username: "Szeverényi Attila",	      time: "00:00:00",        comment: "Felmondás"},       
+    {username: "Fekete Klaudia",	        time: "00:00:00",        comment: "Felmondás"},       
+    {username: "sebo pisti",	            time: "00:00:00",        comment: "Felmondás"},       
+    {username: "Sebok Armando",	          time: "00:00:00",        comment: "Felmondás"},       
+    {username: "olajos feri",	            time: "05:38:58",        comment: "Felmondás"},       
+    {username: "Stoyka Armand",	          time: "79:07:10",        comment: "Felmondás"}    
+    ]
 
 
   return (
@@ -1536,6 +1722,121 @@ const ArchivedDutys = () => {
         <tbody>
           {" "}
           {dutyData30.map((data, id) => {
+            return (
+              <tr key={id}>
+                <td> {data.username} </td>
+                <td className="time">{data.time}</td>
+                <td className="time">{data.comment}</td>
+              </tr>
+            );
+          })}{" "}
+        </tbody>
+      </table>
+
+      <table className="table">
+        <thead>
+          <th colspan="3">31. Ciklus - 2024.06.02-06.16</th>
+          <tr>
+            <th>N&eacute;v</th>
+            <th>Idő</th>
+            <th>Megjegyzés</th>
+          </tr>
+        </thead>
+        <tbody>
+          {" "}
+          {dutyData31.map((data, id) => {
+            return (
+              <tr key={id}>
+                <td> {data.username} </td>
+                <td className="time">{data.time}</td>
+                <td className="time">{data.comment}</td>
+              </tr>
+            );
+          })}{" "}
+        </tbody>
+      </table>
+
+      <table className="table">
+        <thead>
+          <th colspan="3">32. Ciklus - 2024.06.16-06.30</th>
+          <tr>
+            <th>N&eacute;v</th>
+            <th>Idő</th>
+            <th>Megjegyzés</th>
+          </tr>
+        </thead>
+        <tbody>
+          {" "}
+          {dutyData32.map((data, id) => {
+            return (
+              <tr key={id}>
+                <td> {data.username} </td>
+                <td className="time">{data.time}</td>
+                <td className="time">{data.comment}</td>
+              </tr>
+            );
+          })}{" "}
+        </tbody>
+      </table>
+
+      <table className="table">
+        <thead>
+          <th colspan="3">33. Ciklus - 2024.06.30-07.14</th>
+          <tr>
+            <th>N&eacute;v</th>
+            <th>Idő</th>
+            <th>Megjegyzés</th>
+          </tr>
+        </thead>
+        <tbody>
+          {" "}
+          {dutyData33.map((data, id) => {
+            return (
+              <tr key={id}>
+                <td> {data.username} </td>
+                <td className="time">{data.time}</td>
+                <td className="time">{data.comment}</td>
+              </tr>
+            );
+          })}{" "}
+        </tbody>
+      </table>
+
+      <table className="table">
+        <thead>
+          <th colspan="3">34. Ciklus - 2024.07.14-07.28</th>
+          <tr>
+            <th>N&eacute;v</th>
+            <th>Idő</th>
+            <th>Megjegyzés</th>
+          </tr>
+        </thead>
+        <tbody>
+          {" "}
+          {dutyData34.map((data, id) => {
+            return (
+              <tr key={id}>
+                <td> {data.username} </td>
+                <td className="time">{data.time}</td>
+                <td className="time">{data.comment}</td>
+              </tr>
+            );
+          })}{" "}
+        </tbody>
+      </table>
+
+      <table className="table">
+        <thead>
+          <th colspan="3">35. Ciklus - 2024.07.28-08.11</th>
+          <tr>
+            <th>N&eacute;v</th>
+            <th>Idő</th>
+            <th>Megjegyzés</th>
+          </tr>
+        </thead>
+        <tbody>
+          {" "}
+          {dutyData35.map((data, id) => {
             return (
               <tr key={id}>
                 <td> {data.username} </td>
