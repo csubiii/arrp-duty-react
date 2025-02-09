@@ -7,7 +7,7 @@ import Duty from './duty/Duty';
 
 const Main = () => {
 
-  const [ isHidden, setIsHidden ] = useState(true);
+  const [ isHidden, setIsHidden ] = useState(false);
   const [user] = useAuthState(auth);
 
   return (
